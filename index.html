@@ -645,15 +645,172 @@
       .specs{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
     @media (max-width: 540px){
-      .rank-name{ font-size: 16px; }
-      .btn{ min-width: 0; width: 100%; }
-      .btns{ width: 100%; }
-      .rank-card{ grid-template-columns: 56px 90px 1fr; padding: 12px; }
-      .product-thumb{ width: 90px; height: 90px; }
-      .product-thumb img{ width: 80px; height: 80px; }
+      /* Global mobile spacing */
+      .container{ padding: 0 14px; }
+      
+      /* Header mobile */
+      .header-inner{ padding: 10px 0; }
+      .brand-logo{ height: 28px; }
+      .brand-name{ font-size: 15px; }
+      .brand-tag{ font-size: 11px; }
       .badge-disclosure{ display:none; }
       .nav{ display:none; }
-      .hero-title{ font-size: 26px; }
+      
+      /* Hero mobile */
+      .hero{ padding: 14px 0 10px; }
+      .hero-card{ border-radius: 14px; }
+      .hero-left{ padding: 18px; }
+      .hero-title{ font-size: 22px; margin-bottom: 10px; }
+      .hero-sub{ font-size: 14px; margin-bottom: 14px; }
+      .hero-features{ 
+        grid-template-columns: 1fr; 
+        gap: 8px;
+        margin: 14px 0;
+      }
+      .hero-feature{ font-size: 13px; }
+      .hero-actions{ 
+        flex-direction: column;
+        margin-top: 14px;
+      }
+      .btn{ 
+        min-width: 0; 
+        width: 100%; 
+        padding: 14px 16px;
+        font-size: 14px;
+      }
+      .hero-right{ padding: 14px; }
+      .hero-right img{ max-width: 200px; }
+      
+      /* Intro section mobile */
+      .intro-section{ padding: 24px 0 30px; }
+      .intro-title{ font-size: 20px; margin-bottom: 14px; }
+      .intro-subtitle{ font-size: 17px; margin: 24px 0 10px; }
+      .intro-text{ font-size: 14px; line-height: 1.6; margin-bottom: 12px; }
+      
+      /* Section titles mobile */
+      .section{ padding: 10px 0 16px; }
+      .section-title{ font-size: 18px; margin: 14px 0 10px; }
+      
+      /* Rankings mobile */
+      .rankings-head{ 
+        padding: 10px 12px; 
+        border-radius: 12px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+      }
+      .rankings-head .left{ font-size: 14px; }
+      .rankings-head .right{ font-size: 12px; }
+      
+      /* Rank cards mobile */
+      .rank-card{ 
+        grid-template-columns: 1fr;
+        padding: 14px; 
+        gap: 12px;
+        border-radius: 14px;
+      }
+      .rank-badge{ 
+        width: 32px; 
+        height: 32px; 
+        font-size: 14px;
+        position: absolute;
+        top: 14px;
+        left: 14px;
+      }
+      .rank-card{ position: relative; padding-top: 14px; }
+      .product-thumb{ 
+        width: 100%; 
+        height: auto;
+        aspect-ratio: 1;
+        max-width: 140px;
+        margin: 0 auto;
+      }
+      .product-thumb img{ 
+        width: 100%; 
+        height: 100%; 
+      }
+      .rank-main{ text-align: center; }
+      .rank-main > div:first-child{
+        justify-content: center;
+      }
+      .pill{ font-size: 11px; padding: 5px 10px; }
+      .rank-name{ font-size: 16px; }
+      .rank-desc{ font-size: 13px; text-align: left; }
+      .benefits{ margin-top: 12px; }
+      .benefits li{ font-size: 12px; }
+      .rank-side{
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin-top: 14px;
+        padding-top: 14px;
+        border-top: 1px solid var(--border);
+      }
+      .score-box{ 
+        padding: 12px 20px; 
+        min-width: 120px;
+      }
+      .score{ font-size: 24px; }
+      .btn-visit{ 
+        width: 100%; 
+        justify-content: center;
+        padding: 14px 20px;
+      }
+      
+      /* Comparison table mobile */
+      .compare-wrap{ border-radius: 14px; overflow-x: auto; }
+      .compare-head{ padding: 10px 12px; }
+      .compare-head .left{ font-size: 14px; }
+      .compare-head .right{ font-size: 11px; }
+      .compare-table{ font-size: 11px; min-width: 600px; }
+      .compare-table th,
+      .compare-table td{ padding: 10px 8px; }
+      .brandcell{ gap: 8px; }
+      .brandcell img{ width: 28px; height: 28px; }
+      .winner-tag{ font-size: 10px; padding: 3px 6px; margin-left: 4px; }
+      
+      /* FAQ mobile */
+      .faq-wrap{ border-radius: 14px; }
+      .faq-head{ padding: 10px 12px; }
+      .faq-head .left{ font-size: 14px; }
+      .faq-list{ padding: 8px 12px 12px; }
+      details.faq{ padding: 8px 0; }
+      details.faq summary{ font-size: 14px; gap: 8px; }
+      .faq-icon{ width: 24px; height: 24px; font-size: 14px; }
+      details.faq .faq-body{ font-size: 13px; }
+      
+      /* Top 3 cards mobile */
+      .top3-section{ padding: 20px 0 100px; }
+      .top3-card{ padding: 16px; border-radius: 14px; }
+      .top3-header{ margin-bottom: 12px; }
+      .top3-rank{ width: 32px; height: 32px; font-size: 14px; }
+      .top3-promo{ font-size: 11px; padding: 5px 8px; }
+      .top3-product{ gap: 12px; margin-bottom: 12px; }
+      .top3-thumb{ width: 80px; height: 80px; }
+      .top3-thumb img{ width: 70px; height: 70px; }
+      .top3-score-num{ font-size: 26px; }
+      .top3-verdict{ font-size: 12px; }
+      .top3-desc{ font-size: 13px; margin-bottom: 12px; }
+      .top3-specs{ padding-top: 12px; margin-bottom: 12px; gap: 6px; }
+      .top3-spec{ font-size: 12px; }
+      .top3-cta{ padding: 12px 16px; font-size: 13px; }
+      
+      /* Footer mobile */
+      .site-footer{ padding: 30px 0 20px; margin-bottom: 70px; }
+      .footer-logo{ height: 26px; }
+      .footer-brand-text{ font-size: 16px; }
+      .footer-links{ gap: 16px; }
+      .footer-links a{ font-size: 13px; }
+      .footer-copy{ font-size: 12px; }
+      .footer-disclaimer{ font-size: 11px; }
+      
+      /* Sticky bar mobile */
+      .sticky-bar{ padding: 10px 0; }
+      .sticky-thumb{ width: 40px; height: 40px; }
+      .sticky-thumb img{ width: 34px; height: 34px; }
+      .sticky-badge{ display: none; }
+      .sticky-title{ font-size: 12px; }
+      .sticky-cta{ padding: 10px 14px; font-size: 13px; }
     }
 
     /* ==========================================================================
@@ -1060,9 +1217,14 @@
     }
 
     @media (max-width: 640px){
-      .sticky-badge{ display: none; }
-      .sticky-title{ font-size: 13px; }
-      .sticky-cta{ padding: 10px 16px; font-size: 13px; }
+      .footer-top{
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .footer-bottom{
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
 
     /* ==========================================================================
@@ -1135,17 +1297,6 @@
       color: var(--muted);
       max-width: 600px;
       line-height: 1.5;
-    }
-
-    @media (max-width: 640px){
-      .footer-top{
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .footer-bottom{
-        flex-direction: column;
-        align-items: flex-start;
-      }
     }
   </style>
 </head>

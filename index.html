@@ -753,6 +753,263 @@
       max-width: 85ch;
       line-height: 1.6;
     }
+
+    /* ==========================================================================
+       TOP 3 CARDS (GRID BELOW FAQ)
+       ========================================================================== */
+    .top3-section{
+      padding: 30px 0 120px;
+    }
+    .top3-grid{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .top3-card{
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 10px 22px rgba(2,6,23,.05);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    .top3-header{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+    .top3-rank{
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: #f1f5f9;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 15px;
+      color: var(--muted);
+    }
+    .top3-promo{
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text);
+      padding: 6px 10px;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+    }
+    .top3-product{
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .top3-thumb{
+      width: 100px;
+      height: 100px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .top3-thumb img{
+      width: 90px;
+      height: 90px;
+      object-fit: contain;
+    }
+    .top3-score{
+      text-align: center;
+    }
+    .top3-score-num{
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+    .top3-stars{
+      --rating: 5;
+      --star-size: 14px;
+      --star-color: #e5e7eb;
+      --star-fill: #fbbf24;
+      position: relative;
+      display: inline-block;
+      font-size: var(--star-size);
+      line-height: 1;
+      letter-spacing: 2px;
+      margin-top: 4px;
+    }
+    .top3-stars::before{
+      content: "★★★★★";
+      color: var(--star-color);
+    }
+    .top3-stars::after{
+      content: "★★★★★";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: calc((var(--rating) / 5) * 100%);
+      overflow: hidden;
+      color: var(--star-fill);
+      white-space: nowrap;
+    }
+    .top3-verdict{
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+    .top3-desc{
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+      margin-bottom: 16px;
+      flex-grow: 1;
+    }
+    .top3-specs{
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 16px;
+      border-top: 1px solid var(--border);
+      padding-top: 16px;
+    }
+    .top3-spec{
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+    }
+    .top3-spec-label{
+      color: var(--muted);
+    }
+    .top3-spec-value{
+      font-weight: 600;
+      color: var(--text);
+    }
+    .top3-cta{
+      background: #1a1a1a;
+      color: #fff;
+      padding: 14px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      text-decoration: none;
+      transition: all .15s ease;
+    }
+    .top3-cta:hover{ background: #333; }
+    .top3-cta svg{
+      width: 16px;
+      height: 16px;
+    }
+
+    @media (max-width: 980px){
+      .top3-grid{
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .top3-section{
+        padding-bottom: 140px;
+      }
+    }
+
+    /* ==========================================================================
+       STICKY BOTTOM BAR
+       ========================================================================== */
+    .sticky-bar{
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #fff;
+      border-top: 1px solid var(--border);
+      box-shadow: 0 -4px 20px rgba(0,0,0,.08);
+      z-index: 100;
+      padding: 12px 0;
+    }
+    .sticky-inner{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .sticky-product{
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .sticky-thumb{
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .sticky-thumb img{
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+    }
+    .sticky-info{
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .sticky-badge{
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      color: #fff;
+      background: #1a1a1a;
+      padding: 4px 8px;
+      border-radius: 4px;
+      width: fit-content;
+    }
+    .sticky-title{
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--text);
+    }
+    .sticky-cta{
+      background: #1a1a1a;
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      transition: all .15s ease;
+      white-space: nowrap;
+    }
+    .sticky-cta:hover{ background: #333; }
+    .sticky-cta svg{
+      width: 16px;
+      height: 16px;
+    }
+
+    @media (max-width: 640px){
+      .sticky-badge{ display: none; }
+      .sticky-title{ font-size: 13px; }
+      .sticky-cta{ padding: 10px 16px; font-size: 13px; }
+    }
   </style>
 </head>
 
@@ -941,6 +1198,41 @@
       </div>
     </div>
   </section>
+
+  <!-- ==========================================================================
+       TOP 3 CARDS SECTION
+       ========================================================================== -->
+  <section class="top3-section" aria-label="Top 3 Products">
+    <div class="container">
+      <div id="top3Grid" class="top3-grid"></div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       STICKY BOTTOM BAR
+       ========================================================================== -->
+  <div class="sticky-bar">
+    <div class="container">
+      <div class="sticky-inner">
+        <div class="sticky-product">
+          <div class="sticky-thumb">
+            <img src="./hydrotech.png" alt="Hydrotech NZ">
+          </div>
+          <div class="sticky-info">
+            <div class="sticky-badge">Limited time offer</div>
+            <div class="sticky-title">Fast New Zealand Delivery</div>
+          </div>
+        </div>
+        <a class="sticky-cta" href="https://hydrotechnz.com/" target="_blank" rel="nofollow sponsored noopener">
+          Buy now
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10.5 5L15.5 10L10.5 15"/>
+            <line x1="4" y1="10" x2="14" y2="10"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
 
   <script>
     /* ==========================================================================
@@ -1259,6 +1551,86 @@
         if(!icon) return;
         icon.textContent = d.open ? "−" : "+";
       });
+    });
+
+    /* ==========================================================================
+       TOP 3 CARDS RENDER
+       ========================================================================== */
+    const top3Grid = document.getElementById("top3Grid");
+    const top3Products = products.slice(0, 3);
+    
+    const top3Verdicts = {
+      1: "Outstanding",
+      2: "Excellent",
+      3: "Great"
+    };
+
+    const top3Specs = {
+      1: [
+        { label: "Cycle time", value: "5 minutes" },
+        { label: "NZ-based", value: "Yes" }
+      ],
+      2: [
+        { label: "Cycle time", value: "10 minutes" },
+        { label: "International", value: "Yes" }
+      ],
+      3: [
+        { label: "Cycle time", value: "5 minutes" },
+        { label: "Kit included", value: "Yes" }
+      ]
+    };
+
+    const top3Descs = {
+      1: "Seeing your water taste flat and lifeless each day? The Hydrotech NZ bottle uses advanced PEM technology to infuse up to 3.8ppm of molecular hydrogen safely and efficiently. It's an easy, effective way to upgrade your daily hydration.",
+      2: "The Echo Flask delivers the highest stated output in our lineup at up to 8.0ppm. Best suited for buyers who prioritise maximum hydrogen concentration and premium build quality.",
+      3: "A mid-pack choice with a kit-style presentation. Its clearest USP is the stated output limit (up to 2.5ppm) paired with a simpler, practical feature set."
+    };
+
+    top3Products.forEach((p) => {
+      const card = document.createElement("div");
+      card.className = "top3-card";
+
+      const promoHtml = p.promoPill ? `<div class="top3-promo">${p.promoPill}</div>` : '';
+      const specs = top3Specs[p.rank] || [];
+
+      card.innerHTML = `
+        <div class="top3-header">
+          <div class="top3-rank">${p.rank}</div>
+          ${promoHtml}
+        </div>
+
+        <div class="top3-product">
+          <div class="top3-thumb">
+            <img src="${p.image}" alt="${p.name}">
+          </div>
+          <div class="top3-score">
+            <div class="top3-score-num">${p.score.toFixed(1)}</div>
+            <div class="top3-stars" style="--rating:${p.rating}"></div>
+            <div class="top3-verdict">${top3Verdicts[p.rank] || "Good"}</div>
+          </div>
+        </div>
+
+        <div class="top3-desc">${top3Descs[p.rank] || ""}</div>
+
+        <div class="top3-specs">
+          ${specs.map(s => `
+            <div class="top3-spec">
+              <span class="top3-spec-label">${s.label}</span>
+              <span class="top3-spec-value">${s.value}</span>
+            </div>
+          `).join("")}
+        </div>
+
+        <a class="top3-cta" href="${p.url}" target="_blank" rel="nofollow sponsored noopener">
+          Visit Site
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10.5 5L15.5 10L10.5 15"/>
+            <line x1="4" y1="10" x2="14" y2="10"/>
+          </svg>
+        </a>
+      `;
+
+      top3Grid.appendChild(card);
     });
   </script>
 

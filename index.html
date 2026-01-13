@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en-NZ">
 <head>
@@ -8,10 +7,10 @@
   <meta name="description" content="Independent-style rankings and quick comparison of top hydrogen water bottles for NZ buyers (2026)." />
   <meta name="robots" content="index,follow" />
 
-  <!-- Fonts -->
+  <!-- Fonts - Updated to match WellnessPulse style -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,500&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
   <style>
     /* ==========================================================================
@@ -34,15 +33,20 @@
 
       --radius: 18px;
       --container: 1120px;
+
+      /* Font families - WellnessPulse style */
+      --font-serif: 'Lora', Georgia, 'Times New Roman', serif;
+      --font-sans: 'DM Sans', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
     }
     *{ box-sizing:border-box; }
     html,body{ height:100%; }
     body{
       margin:0;
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      font-family: var(--font-sans);
       color: var(--text);
       background: var(--bg);
-      line-height: 1.4;
+      line-height: 1.5;
+      font-weight: 400;
     }
     a{ color: inherit; }
     .container{
@@ -58,7 +62,7 @@
       position: sticky;
       top: 0;
       z-index: 50;
-      background: rgba(246,248,252,.85);
+      background: rgba(255,255,255,.95);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(229,231,235,.8);
     }
@@ -67,7 +71,7 @@
       align-items:center;
       justify-content:space-between;
       gap: 14px;
-      padding: 10px 0;
+      padding: 14px 0;
     }
     .brand{
       display:flex;
@@ -88,9 +92,10 @@
       min-width: 0;
     }
     .brand-name{
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      font-size: 14px;
+      font-family: var(--font-serif);
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      font-size: 18px;
       line-height: 1.1;
       white-space: nowrap;
       overflow: hidden;
@@ -98,7 +103,7 @@
     }
     .brand-tag{
       font-size: 12px;
-      font-weight: 700;
+      font-weight: 500;
       color: var(--muted);
       white-space: nowrap;
       overflow: hidden;
@@ -112,8 +117,8 @@
     }
     .nav a{
       text-decoration:none;
-      font-weight: 800;
-      font-size: 13px;
+      font-weight: 500;
+      font-size: 14px;
       color: var(--muted);
       padding: 10px 12px;
       border-radius: 12px;
@@ -129,8 +134,8 @@
       gap: 10px;
     }
     .badge-disclosure{
-      font-size: 12px;
-      font-weight: 900;
+      font-size: 13px;
+      font-weight: 500;
       color: var(--muted);
       padding: 10px 12px;
       border: 1px solid var(--border);
@@ -156,42 +161,40 @@
       gap: 0;
     }
     .hero-left{
-      padding: 22px;
+      padding: 28px;
     }
     .hero-kicker{
       display:inline-flex;
       align-items:center;
       gap: 8px;
-      font-weight: 900;
-      font-size: 12px;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      color: var(--blue);
-      background: #eef6ff;
-      border: 1px solid rgba(31,111,235,.18);
-      padding: 8px 10px;
-      border-radius: 10px;
-      width: fit-content;
-      margin-bottom: 10px;
+      font-weight: 500;
+      font-size: 13px;
+      letter-spacing: .02em;
+      color: var(--muted);
+      margin-bottom: 12px;
     }
     .hero-title{
-      margin: 0 0 8px;
-      font-size: 28px;
-      font-weight: 950;
-      letter-spacing: -0.03em;
-      line-height: 1.15;
+      margin: 0 0 12px;
+      font-family: var(--font-serif);
+      font-size: 32px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      color: var(--text);
     }
     .hero-sub{
-      margin: 0 0 14px;
+      margin: 0 0 18px;
       color: var(--muted);
-      font-weight: 650;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 1.6;
       max-width: 70ch;
     }
     .hero-actions{
       display:flex;
       gap: 10px;
       flex-wrap:wrap;
-      margin-top: 12px;
+      margin-top: 16px;
     }
     .hero-right{
       background: radial-gradient(1200px 500px at 10% 0%, rgba(31,111,235,.12), transparent 60%);
@@ -216,11 +219,12 @@
       align-items:center;
       justify-content:center;
       gap: 8px;
-      padding: 12px 16px;
-      border-radius: 14px;
+      padding: 12px 18px;
+      border-radius: 10px;
       border: 1px solid transparent;
-      font-weight: 900;
-      font-size: 13px;
+      font-family: var(--font-sans);
+      font-weight: 600;
+      font-size: 14px;
       text-decoration:none;
       cursor:pointer;
       transition: all .15s ease;
@@ -228,17 +232,17 @@
       min-width: 160px;
     }
     .btn-primary{
-      background: var(--blue);
+      background: #1a1a1a;
       color: #fff;
-      box-shadow: 0 10px 18px rgba(31,111,235,.18);
+      box-shadow: 0 4px 12px rgba(0,0,0,.15);
     }
-    .btn-primary:hover{ background: var(--blue-dark); transform: translateY(-1px); }
+    .btn-primary:hover{ background: #333; transform: translateY(-1px); }
     .btn-outline{
       background:#fff;
-      color: var(--blue);
-      border-color: rgba(31,111,235,.45);
+      color: var(--text);
+      border-color: var(--border);
     }
-    .btn-outline:hover{ background: #f8fbff; border-color: rgba(31,111,235,.75); }
+    .btn-outline:hover{ background: #f8f9fa; border-color: #ccc; }
 
     /* ==========================================================================
        SECTION SPACING
@@ -251,9 +255,10 @@
        RANKED CARDS (UPDATED)
        ========================================================================== */
     .section-title{
-      font-size: 18px;
-      font-weight: 900;
-      margin: 18px 0 10px;
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 600;
+      margin: 18px 0 14px;
       letter-spacing: -0.01em;
     }
 
@@ -275,20 +280,20 @@
       margin-bottom: 12px;
     }
     .rankings-head .left{
-      font-weight: 900;
-      font-size: 16px;
+      font-weight: 600;
+      font-size: 15px;
     }
     .rankings-head .right{
       color: var(--muted);
       font-size: 13px;
-      font-weight: 700;
+      font-weight: 400;
     }
 
     .rank-card{
       display:grid;
       grid-template-columns: 64px 92px 1fr 240px;
       gap: 14px;
-      padding: 14px;
+      padding: 18px;
       align-items:start;
       background:#fff;
       border: 1px solid var(--border);
@@ -299,16 +304,17 @@
     .rank-card:last-child{ margin-bottom: 0; }
 
     .rank-badge{
-      width: 46px;
-      height: 46px;
-      border-radius: 10px;
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
       display:flex;
       align-items:center;
       justify-content:center;
-      font-weight: 900;
-      color:#fff;
-      background: var(--blue);
-      box-shadow: 0 10px 18px rgba(31,111,235,.18);
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--muted);
+      background: #f1f5f9;
+      border: 1px solid var(--border);
       margin-left: 6px;
     }
 
@@ -337,19 +343,18 @@
       align-items:center;
       gap: 8px;
       font-size: 12px;
-      font-weight: 900;
-      letter-spacing: .03em;
-      text-transform: uppercase;
-      padding: 6px 10px;
-      border-radius: 8px;
+      font-weight: 600;
+      letter-spacing: .01em;
+      padding: 6px 12px;
+      border-radius: 6px;
       border: 1px solid transparent;
       margin-bottom: 8px;
       width: fit-content;
     }
     .pill.editors{
-      background: #eaf7ef;
-      color: var(--green-dark);
-      border-color: rgba(21,128,61,.18);
+      background: #1a1a1a;
+      color: #fff;
+      border-color: #1a1a1a;
     }
     .pill.highoutput{
       background: #eef6ff;
@@ -371,21 +376,29 @@
       color: #334155;
       border-color: rgba(51,65,85,.18);
     }
+    .pill.promo{
+      background: #fff;
+      color: var(--text);
+      border-color: var(--border);
+      font-weight: 500;
+    }
 
     .rank-name{
+      font-family: var(--font-serif);
       font-size: 18px;
-      font-weight: 950;
+      font-weight: 600;
       letter-spacing: -0.01em;
-      margin-bottom: 6px;
-      line-height: 1.2;
+      margin-bottom: 8px;
+      line-height: 1.25;
     }
 
     .rank-desc{
       color: var(--muted);
-      font-weight: 650;
+      font-weight: 400;
       font-size: 14px;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       max-width: 78ch;
+      line-height: 1.55;
     }
 
     /* green checks in circles */
@@ -393,18 +406,18 @@
       list-style:none;
       margin: 0;
       padding: 0;
-      margin-top: 6px;
+      margin-top: 8px;
 
       /* UPDATED: grid layout (3x3 for #1, 2x2 for others) */
       display:grid;
-      gap: 10px 14px;
+      gap: 10px 16px;
     }
     .benefits li{
       display:flex;
       align-items:flex-start;
       gap: 10px;
-      color: var(--muted);
-      font-weight: 650;
+      color: var(--text);
+      font-weight: 400;
       font-size: 13px;
     }
     .check{
@@ -443,15 +456,25 @@
       align-items:flex-end;
     }
 
+    .score-box{
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 20px;
+      text-align: center;
+      min-width: 100px;
+    }
+
     .score{
-      font-size: 22px;
-      font-weight: 950;
+      font-size: 26px;
+      font-weight: 700;
       letter-spacing: -0.02em;
+      line-height: 1;
     }
 
     .stars{
       --rating: 5;
-      --star-size: 16px;
+      --star-size: 14px;
       --star-color: #e5e7eb;
       --star-fill: #fbbf24;
 
@@ -460,6 +483,7 @@
       font-size: var(--star-size);
       line-height: 1;
       letter-spacing: 2px;
+      margin-top: 4px;
     }
     .stars::before{
       content: "★★★★★";
@@ -476,10 +500,10 @@
     }
 
     .rank-verdict{
-      font-weight: 950;
+      font-weight: 500;
       font-size: 13px;
-      color: var(--text);
-      margin-top: 2px;
+      color: var(--muted);
+      margin-top: 4px;
     }
 
     .btns{
@@ -487,6 +511,26 @@
       gap: 10px;
       flex-wrap:wrap;
       justify-content:flex-end;
+    }
+
+    .btn-visit{
+      background: #1a1a1a;
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      transition: all .15s ease;
+    }
+    .btn-visit:hover{ background: #333; }
+    .btn-visit svg{
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
     }
 
     .details{
@@ -515,13 +559,13 @@
     .spec .k{
       color: var(--muted);
       font-size: 11px;
-      font-weight: 900;
+      font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: .08em;
+      letter-spacing: .06em;
       margin-bottom: 4px;
     }
     .spec .v{
-      font-weight: 900;
+      font-weight: 600;
       font-size: 13px;
       color: var(--text);
     }
@@ -553,6 +597,7 @@
       .product-thumb img{ width: 72px; height: 72px; }
       .badge-disclosure{ display:none; }
       .nav{ display:none; }
+      .hero-title{ font-size: 26px; }
     }
 
     /* ==========================================================================
@@ -575,13 +620,13 @@
       gap: 12px;
     }
     .compare-head .left{
-      font-weight: 900;
-      font-size: 16px;
+      font-weight: 600;
+      font-size: 15px;
     }
     .compare-head .right{
       color: var(--muted);
       font-size: 13px;
-      font-weight: 700;
+      font-weight: 400;
     }
     .compare-table{
       width:100%;
@@ -599,9 +644,9 @@
       background: #fbfcff;
       color: var(--muted);
       font-size: 12px;
-      letter-spacing: .06em;
+      letter-spacing: .04em;
       text-transform: uppercase;
-      font-weight: 900;
+      font-weight: 600;
     }
     .compare-table tr:last-child td{ border-bottom:none; }
 
@@ -609,7 +654,7 @@
       display:flex;
       align-items:center;
       gap: 10px;
-      font-weight: 900;
+      font-weight: 500;
     }
     .brandcell img{
       width: 34px;
@@ -630,17 +675,17 @@
       display:inline-flex;
       align-items:center;
       gap: 8px;
-      font-weight: 900;
-      font-size: 12px;
-      padding: 6px 10px;
-      border-radius: 10px;
+      font-weight: 600;
+      font-size: 11px;
+      padding: 4px 8px;
+      border-radius: 6px;
       color: #7a4f00;
       background: rgba(245,179,1,.18);
       border: 1px solid rgba(245,179,1,.35);
       margin-left: 8px;
       white-space:nowrap;
     }
-    .muted{ color: var(--muted); font-weight: 650; }
+    .muted{ color: var(--muted); font-weight: 400; }
 
     /* ==========================================================================
        FAQ (ADDED BACK)
@@ -662,8 +707,8 @@
       gap: 12px;
     }
     .faq-head .left{
-      font-weight: 900;
-      font-size: 16px;
+      font-weight: 600;
+      font-size: 15px;
     }
     .faq-list{
       padding: 10px 14px 14px;
@@ -676,7 +721,7 @@
     details.faq summary{
       cursor:pointer;
       list-style:none;
-      font-weight: 900;
+      font-weight: 500;
       color: var(--text);
       display:flex;
       justify-content:space-between;
@@ -694,16 +739,17 @@
       align-items:center;
       justify-content:center;
       color: var(--muted);
-      font-weight: 900;
+      font-weight: 500;
       background:#fff;
       flex: 0 0 28px;
     }
     details.faq .faq-body{
       color: var(--muted);
-      font-weight: 650;
+      font-weight: 400;
       font-size: 14px;
       padding: 6px 0 2px;
       max-width: 85ch;
+      line-height: 1.6;
     }
   </style>
 </head>
@@ -731,7 +777,7 @@
         </nav>
 
         <div class="header-cta">
-          <div class="badge-disclosure">Advertiser Disclosure</div>
+          <div class="badge-disclosure">Advertiser disclosure</div>
         </div>
       </div>
     </div>
@@ -744,8 +790,8 @@
     <div class="container">
       <div class="hero-card">
         <div class="hero-left">
-          <div class="hero-kicker">2026 Updated Rankings</div>
-          <h1 class="hero-title">Top Hydrogen Water Bottles for NZ Buyers</h1>
+          <div class="hero-kicker">Updated: January 2026</div>
+          <h1 class="hero-title">Best Hydrogen Water Bottles for NZ Buyers</h1>
           <p class="hero-sub">
             A clear comparison based on stated output, build, protections and total value for NZ buyers.
             Start with the ranked cards — then jump to the quick comparison table.
@@ -772,7 +818,7 @@
       <div class="rankings-wrap">
         <div class="rankings-head">
           <div class="left">Ranked Results</div>
-          <div class="right">Quick scan — tap “View details” for specs</div>
+          <div class="right">Quick scan — tap "View details" for specs</div>
         </div>
 
         <div id="rankingsList"></div>
@@ -825,12 +871,12 @@
         <div class="faq-list">
           <details class="faq">
             <summary>
-              <span>1) What does “ppm” mean for hydrogen water bottles?</span>
+              <span>1) What does "ppm" mean for hydrogen water bottles?</span>
               <span class="faq-icon">+</span>
             </summary>
             <div class="faq-body">
-              PPM is “parts per million” — a common way brands describe the concentration of dissolved hydrogen in water.
-              Some brands also use ppb (parts per billion). Because testing methods and conditions vary, it’s best to treat ppm as
+              PPM is "parts per million" — a common way brands describe the concentration of dissolved hydrogen in water.
+              Some brands also use ppb (parts per billion). Because testing methods and conditions vary, it's best to treat ppm as
               a comparison guide and verify via documentation where available.
             </div>
           </details>
@@ -852,7 +898,7 @@
               <span class="faq-icon">+</span>
             </summary>
             <div class="faq-body">
-              Most users run a cycle per fill, then drink shortly after. If you’re using hydrogen water for daily hydration,
+              Most users run a cycle per fill, then drink shortly after. If you're using hydrogen water for daily hydration,
               consistency tends to matter more than doing longer or more frequent cycles.
             </div>
           </details>
@@ -863,7 +909,7 @@
               <span class="faq-icon">+</span>
             </summary>
             <div class="faq-body">
-              Material impacts durability, taste, and cleaning. Glass can feel “cleaner” taste-wise for some people and is easier to inspect,
+              Material impacts durability, taste, and cleaning. Glass can feel "cleaner" taste-wise for some people and is easier to inspect,
               while silicone components can help with impact resistance. Build quality and sealing matter just as much as material type.
             </div>
           </details>
@@ -906,9 +952,10 @@
         name: "Hydrotech NZ Hydrogen Water Bottle",
         image: "./hydrotech.png",
         url: "https://hydrotechnz.com/",
-        score: 9.8,
+        score: 9.9,
         rating: 5.0,
-        pill: { type:"editors", text:"Editor's Choice" },
+        pill: { type:"editors", text:"World's Best Hydrogen Water Bottle" },
+        promoPill: "SAVE $50 + FREE shipping NZ-wide",
         details: {
           description: "Rank #1 overall for NZ buyers. A balanced premium pick that focuses on real-world use: build quality, protections, and value. The core USP is getting a premium experience (materials, finish, and support) without paying the highest international price tier.",
           specs: [
@@ -930,24 +977,25 @@
         name: "Echo Flask Hydrogen Water Bottle",
         image: "./echo.png",
         url: "https://www.echowater.com/",
-        score: 9.3,
+        score: 9.8,
         rating: 4.5,
-        pill: { type:"highoutput", text:"High Output" },
+        pill: { type:"highoutput", text:"Best High Output" },
+        promoPill: "Get $225 OFF with code CYB",
         details: {
           description: "Rank #2 for power/features. Best suited for buyers who prioritise maximum stated output and premium ecosystem positioning, accepting a higher total NZD cost. Strong warranty period is a key advantage.",
           specs: [
-            { k:"Stated Output", v:"Up to 8.0ppm" },             // UPDATED
-            { k:"Build", v:"Glass + Silicone" },                // UPDATED
-            { k:"Warranty", v:"5 years" },                      // UPDATED
+            { k:"Stated Output", v:"Up to 8.0ppm" },
+            { k:"Build", v:"Glass + Silicone" },
+            { k:"Warranty", v:"5 years" },
             { k:"Controls", v:"Premium controls (stated)" },
             { k:"Support", v:"International" },
             { k:"Notes", v:"Verify specs/policies on seller site" },
           ]
         },
-        priceNZD: 499,  // keep/update as you verify
-        output: "Up to 8.0ppm",         // UPDATED
-        build: "Glass + Silicone",      // UPDATED
-        warranty: "5 years"             // UPDATED
+        priceNZD: 499,
+        output: "Up to 8.0ppm",
+        build: "Glass + Silicone",
+        warranty: "5 years"
       },
       {
         rank: 3,
@@ -958,12 +1006,12 @@
         rating: 3.8,
         pill: { type:"features", text:"Feature Kit" },
         details: {
-          description: "Rank #3 for kit-style offering. A reasonable option if you want a bundled setup and a simpler feature list. The most important USP here is the stated output ceiling (up to 2.5ppm) — if you’re expecting higher stated outputs, this tends to land mid-pack.",
+          description: "Rank #3 for kit-style offering. A reasonable option if you want a bundled setup and a simpler feature list. The most important USP here is the stated output ceiling (up to 2.5ppm) — if you're expecting higher stated outputs, this tends to land mid-pack.",
           specs: [
             { k:"Stated Output", v:"Up to 2.5ppm" },
             { k:"Format", v:"Bottle kit" },
             { k:"Material", v:"Glass (stated)" },
-            { k:"Warranty", v:"not specified" },  // UPDATED in comparison rendering logic too
+            { k:"Warranty", v:"not specified" },
             { k:"Support", v:"not specified" },
             { k:"Notes", v:"Check documentation before purchase" },
           ]
@@ -982,7 +1030,7 @@
         rating: 3.5,
         pill: { type:"budget", text:"Lower Cost" },
         details: {
-          description: "Rank #4 for budget-first shoppers. The USP is lower entry price in NZD, but you’re typically trading off clarity around documentation, long-term support, and protections. Best for buyers who want to try the category without committing to a premium tier.",
+          description: "Rank #4 for budget-first shoppers. The USP is lower entry price in NZD, but you're typically trading off clarity around documentation, long-term support, and protections. Best for buyers who want to try the category without committing to a premium tier.",
           specs: [
             { k:"Claims", v:"Check listing details" },
             { k:"Material", v:"Varies by listing" },
@@ -992,7 +1040,7 @@
             { k:"Use", v:"Everyday" },
           ]
         },
-        priceNZD: 169,  // update as you verify
+        priceNZD: 169,
         output: "Claims vary",
         build: "Varies by listing",
         warranty: "not specified"
@@ -1006,7 +1054,7 @@
         rating: 3.2,
         pill: { type:"alt", text:"Alternative" },
         details: {
-          description: "Rank #5 for value comparison. At $339 NZD, it sits in a premium price band, so the main question is whether the listing provides enough clarity on specs, support, and protections to justify the cost. Best if you’ve confirmed the details match your priorities.",
+          description: "Rank #5 for value comparison. At $339 NZD, it sits in a premium price band, so the main question is whether the listing provides enough clarity on specs, support, and protections to justify the cost. Best if you've confirmed the details match your priorities.",
           specs: [
             { k:"Price Tier", v:"Premium" },
             { k:"Support", v:"not specified" },
@@ -1035,6 +1083,8 @@
       </span>
     `;
 
+    const arrowIcon = `<svg viewBox="0 0 20 20" style="width:16px;height:16px;fill:currentColor"><path d="M10.5 5L15.5 10L10.5 15" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="4" y1="10" x2="14" y2="10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>`;
+
     function pillClass(type){
       if(type === "editors") return "pill editors";
       if(type === "highoutput") return "pill highoutput";
@@ -1053,22 +1103,22 @@
 
     // In-depth descriptions, rank-aware, and clarify USPs
     const descByRank = {
-      1: "Rank #1 (Best Overall): The clear winner for NZ buyers because it balances a premium feel with practical protections. The strongest USPs are its overall value positioning, premium materials/finish, and the combination of warranty + guarantee that reduces purchase risk for everyday use.",
-      2: "Rank #2 (High Output / Premium): This is the pick for buyers who prioritise the highest stated output and a premium build spec. Its main USPs are the stated output ceiling (up to 8.0ppm), the Glass + Silicone build, and a long 5-year warranty — typically at a higher total NZD cost.",
-      3: "Rank #3 (Feature Kit): A mid-pack choice with a kit-style presentation. Its clearest USP is the stated output limit (up to 2.5ppm) paired with a simpler, practical feature set. Best if you want a straightforward option and have confirmed support/warranty details from the seller.",
-      4: "Rank #4 (Lower Cost): A budget-first option that can make sense if the priority is a lower NZD entry point. The USPs here are affordability and basic portability, with the trade-off being less clarity around protections and long-term support depending on the listing.",
-      5: "Rank #5 (Alternative): A premium NZD price ($339) that competes with higher-ranked options on cost. The key USP is brand preference if you’ve validated specs and protections; otherwise it’s harder to justify the price without clearer documentation on output, warranty, and support."
+      1: "Seeing your water taste flat and lifeless each day? The Hydrotech NZ bottle uses advanced PEM technology to infuse up to 3.8ppm of molecular hydrogen safely and efficiently. It's an easy, effective way to upgrade your daily hydration — plus, get free NZ-wide shipping.",
+      2: "The Echo Flask delivers the highest stated output in our lineup at up to 8.0ppm. Best suited for buyers who prioritise maximum hydrogen concentration and premium build quality, with a strong 5-year warranty backing it up.",
+      3: "A mid-pack choice with a kit-style presentation. Its clearest USP is the stated output limit (up to 2.5ppm) paired with a simpler, practical feature set. Best if you want a straightforward option.",
+      4: "A budget-first option that can make sense if the priority is a lower NZD entry point. The trade-off is less clarity around protections and long-term support depending on the listing.",
+      5: "At $339 NZD, this sits in a premium price band. Best if you've confirmed the specs and protections match your priorities before purchasing."
     };
 
     // USPs: #1 has 6, others have 4
     const uspByRank = {
       1: [
-        "Best overall value for NZ buyers",
-        "Up to 3.8ppm (3,800ppb) claim",
-        "Premium glass + stainless finish",
-        "USB-C charging convenience",
+        "Ranked #1 in NZ Market",
+        "Premium glass + stainless build",
+        "Up to 3.8ppm (3,800ppb) output",
+        "Free NZ-wide shipping",
         "12-month warranty protection",
-        "30-day guarantee reduces risk"
+        "30-day money-back guarantee"
       ],
       2: [
         "Up to 8.0ppm stated output",
@@ -1108,6 +1158,8 @@
 
       const gridClass = (p.rank === 1) ? "grid-3x3" : "grid-2x2";
 
+      const promoPillHtml = p.promoPill ? `<div class="pill promo">${p.promoPill}</div>` : '';
+
       row.innerHTML = `
         <div class="rank-badge">${p.rank}</div>
 
@@ -1116,7 +1168,10 @@
         </div>
 
         <div class="rank-main">
-          <div class="${pillClass(p.pill.type)}">${p.pill.text}</div>
+          <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-bottom:8px;">
+            <div class="${pillClass(p.pill.type)}">${p.pill.text}</div>
+            ${promoPillHtml}
+          </div>
           <div class="rank-name">${p.name}</div>
           <div class="rank-desc">${descByRank[p.rank] || ""}</div>
 
@@ -1138,37 +1193,21 @@
         </div>
 
         <div class="rank-side">
-          <div>
+          <div class="score-box">
             <div class="score">${p.score.toFixed(1)}</div>
             <div class="stars" style="--rating:${p.rating}" aria-label="${p.rating} out of 5 stars"></div>
             <div class="rank-verdict">${verdictByRank[p.rank] || "Good"}</div>
           </div>
 
-          <div class="btns">
-            <button class="btn btn-primary" type="button" data-toggle="${p.rank}">View details →</button>
-            <a class="btn btn-outline" href="${p.url}" target="_blank" rel="nofollow sponsored noopener">Visit site →</a>
-          </div>
+          <a class="btn-visit" href="${p.url}" target="_blank" rel="nofollow sponsored noopener">Visit Site ${arrowIcon}</a>
         </div>
       `;
 
       rankingsList.appendChild(row);
     });
 
-    rankingsList.addEventListener("click", (e) => {
-      const btn = e.target.closest("button[data-toggle]");
-      if(!btn) return;
-      const id = btn.getAttribute("data-toggle");
-      const card = document.getElementById(`product-${id}`);
-      const isOpen = card.classList.toggle("expanded");
-      btn.textContent = isOpen ? "Hide details →" : "View details →";
-    });
-
     /* ==========================================================================
        QUICK COMPARISON RENDER (UPDATED)
-       - Echo output = up to 8.0ppm
-       - Echo build = Glass + Silicone
-       - Echo warranty = 5 years
-       - Any "Varies" warranty -> "not specified"
        ========================================================================== */
 
     const compareBody = document.getElementById("compareBody");
@@ -1185,7 +1224,6 @@
       const tr = document.createElement("tr");
       if (p.rank === 1) tr.className = "winner-row";
 
-      // Build + warranty explicitly from data (with fallback)
       const build = p.build || (p.details?.specs || []).find(s => s.k === "Build")?.v || (p.details?.specs || []).find(s => s.k === "Material")?.v || "—";
       const warranty = normalizeWarranty(
         p.warranty ||
@@ -1225,4 +1263,3 @@
 
 </body>
 </html>
-```

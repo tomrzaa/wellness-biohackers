@@ -8,14 +8,14 @@
   <meta name="description" content="Independent-style rankings and quick comparison of top hydrogen water bottles for NZ buyers (2026)." />
   <meta name="robots" content="index,follow" />
 
-  <!-- Fonts (closest practical match without your exact WellnessPulse font files) -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
     /* ==========================================================================
-       GLOBAL STYLES (WellnessPulse-like: clean, clinical, trustworthy)
+       GLOBAL STYLES
        ========================================================================== */
     :root{
       --bg: #f6f8fc;
@@ -31,10 +31,8 @@
       --green-dark: #166534;
 
       --gold: #f5b301;
-      --gold-dark: #d89c00;
 
       --radius: 18px;
-
       --container: 1120px;
     }
     *{ box-sizing:border-box; }
@@ -250,12 +248,7 @@
     }
 
     /* ==========================================================================
-       RANKED CARDS SECTION (UPDATED PER YOUR REQUEST)
-       ========================================================================== */
-
-    /* ==========================================================================
-       RANKINGS (separate vertical cards, WellnessPulse-like layout)
-       - IMPORTANT: no gold outline in rankings (per request)
+       RANKED CARDS (UPDATED)
        ========================================================================== */
     .section-title{
       font-size: 18px;
@@ -291,7 +284,6 @@
       font-weight: 700;
     }
 
-    /* Each card is its own box */
     .rank-card{
       display:grid;
       grid-template-columns: 64px 92px 1fr 240px;
@@ -309,7 +301,7 @@
     .rank-badge{
       width: 46px;
       height: 46px;
-      border-radius: 10px; /* less rounded */
+      border-radius: 10px;
       display:flex;
       align-items:center;
       justify-content:center;
@@ -323,7 +315,7 @@
     .product-thumb{
       width: 92px;
       height: 92px;
-      border-radius: 12px; /* less rounded */
+      border-radius: 12px;
       border: 1px solid var(--border);
       background: #fff;
       display:flex;
@@ -340,7 +332,6 @@
 
     .rank-main{ min-width: 0; }
 
-    /* badges: not overly rounded */
     .pill{
       display:inline-flex;
       align-items:center;
@@ -394,17 +385,19 @@
       font-weight: 650;
       font-size: 14px;
       margin-bottom: 10px;
-      max-width: 70ch;
+      max-width: 78ch;
     }
 
     /* green checks in circles */
     .benefits{
       list-style:none;
-      display:grid;
-      gap: 7px;
       margin: 0;
       padding: 0;
       margin-top: 6px;
+
+      /* UPDATED: grid layout (3x3 for #1, 2x2 for others) */
+      display:grid;
+      gap: 10px 14px;
     }
     .benefits li{
       display:flex;
@@ -428,6 +421,19 @@
     }
     .check svg{ width: 12px; height: 12px; fill: var(--green); }
 
+    /* Grid presets */
+    .benefits.grid-3x3{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .benefits.grid-2x2{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+    @media (max-width: 980px){
+      .benefits.grid-3x3{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .benefits.grid-2x2{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 540px){
+      .benefits.grid-3x3,
+      .benefits.grid-2x2{ grid-template-columns: 1fr; }
+    }
+
     .rank-side{
       justify-self:end;
       text-align:right;
@@ -443,7 +449,6 @@
       letter-spacing: -0.02em;
     }
 
-    /* CSS star rating with halves/decimals */
     .stars{
       --rating: 5;
       --star-size: 16px;
@@ -484,7 +489,6 @@
       justify-content:flex-end;
     }
 
-    /* collapsible details */
     .details{
       grid-column: 1 / -1;
       margin-top: 12px;
@@ -552,7 +556,7 @@
     }
 
     /* ==========================================================================
-       QUICK COMPARISON (Hydrotech gold outline ONLY here)
+       QUICK COMPARISON
        ========================================================================== */
     .compare-wrap{
       border: 1px solid var(--border);
@@ -638,16 +642,68 @@
     }
     .muted{ color: var(--muted); font-weight: 650; }
 
-    .sr-only{
-      position:absolute;
-      width:1px;
-      height:1px;
-      padding:0;
-      margin:-1px;
+    /* ==========================================================================
+       FAQ (ADDED BACK)
+       ========================================================================== */
+    .faq-wrap{
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: 0 10px 22px rgba(2,6,23,.05);
       overflow:hidden;
-      clip:rect(0,0,0,0);
-      white-space:nowrap;
-      border:0;
+    }
+    .faq-head{
+      padding: 12px 14px;
+      background: #fbfcff;
+      border-bottom: 1px solid var(--border);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap: 12px;
+    }
+    .faq-head .left{
+      font-weight: 900;
+      font-size: 16px;
+    }
+    .faq-list{
+      padding: 10px 14px 14px;
+    }
+    details.faq{
+      border-bottom: 1px solid var(--border);
+      padding: 10px 0;
+    }
+    details.faq:last-child{ border-bottom:none; }
+    details.faq summary{
+      cursor:pointer;
+      list-style:none;
+      font-weight: 900;
+      color: var(--text);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap: 10px;
+      padding: 6px 0;
+    }
+    details.faq summary::-webkit-details-marker{ display:none; }
+    .faq-icon{
+      width: 28px;
+      height: 28px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      color: var(--muted);
+      font-weight: 900;
+      background:#fff;
+      flex: 0 0 28px;
+    }
+    details.faq .faq-body{
+      color: var(--muted);
+      font-weight: 650;
+      font-size: 14px;
+      padding: 6px 0 2px;
+      max-width: 85ch;
     }
   </style>
 </head>
@@ -655,14 +711,12 @@
 <body>
 
   <!-- ==========================================================================
-       HEADER SECTION (UPDATED LOGO)
-       NOTE: Save your uploaded logo as: "wb-logo.png" in the repo root (same folder as index.html)
+       HEADER SECTION
        ========================================================================== -->
   <header class="site-header">
     <div class="container">
       <div class="header-inner">
         <a class="brand" href="#">
-          <!-- UPDATED: replaces current logo -->
           <img class="brand-logo" src="./wb-logo.png" alt="WellnessBiohackers" />
           <div class="brand-text">
             <div class="brand-name">WellnessBiohackers</div>
@@ -673,6 +727,7 @@
         <nav class="nav" aria-label="Primary">
           <a href="#rankings">Rankings</a>
           <a href="#comparison">Quick comparison</a>
+          <a href="#faq">FAQ</a>
         </nav>
 
         <div class="header-cta">
@@ -684,7 +739,6 @@
 
   <!-- ==========================================================================
        HERO SECTION
-       NOTE: Uses your uploaded hero image: "hero-scientists.png"
        ========================================================================== -->
   <section class="hero">
     <div class="container">
@@ -693,8 +747,8 @@
           <div class="hero-kicker">2026 Updated Rankings</div>
           <h1 class="hero-title">Top Hydrogen Water Bottles for NZ Buyers</h1>
           <p class="hero-sub">
-            A quick, practical comparison based on stated output, build quality, protections, and overall value.
-            See the ranked list first — then the quick comparison table below.
+            A clear comparison based on stated output, build, protections and total value for NZ buyers.
+            Start with the ranked cards — then jump to the quick comparison table.
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#rankings">View #1 Pick →</a>
@@ -709,7 +763,7 @@
   </section>
 
   <!-- ==========================================================================
-       RANKINGS SECTION (UPDATED)
+       RANKINGS SECTION
        ========================================================================== -->
   <section class="section" aria-label="Rankings list">
     <div class="container">
@@ -727,7 +781,7 @@
   </section>
 
   <!-- ==========================================================================
-       QUICK COMPARISON SECTION (Hydrotech gold highlight ONLY here)
+       QUICK COMPARISON SECTION
        ========================================================================== -->
   <section class="section" aria-label="Quick comparison">
     <div class="container">
@@ -755,11 +809,95 @@
     </div>
   </section>
 
+  <!-- ==========================================================================
+       FAQ SECTION (ADDED BACK)
+       ========================================================================== -->
+  <section class="section" aria-label="FAQ">
+    <div class="container">
+      <div class="section-title" id="faq">FAQ</div>
+
+      <div class="faq-wrap">
+        <div class="faq-head">
+          <div class="left">Common questions</div>
+          <div class="right"></div>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq">
+            <summary>
+              <span>1) What does “ppm” mean for hydrogen water bottles?</span>
+              <span class="faq-icon">+</span>
+            </summary>
+            <div class="faq-body">
+              PPM is “parts per million” — a common way brands describe the concentration of dissolved hydrogen in water.
+              Some brands also use ppb (parts per billion). Because testing methods and conditions vary, it’s best to treat ppm as
+              a comparison guide and verify via documentation where available.
+            </div>
+          </details>
+
+          <details class="faq">
+            <summary>
+              <span>2) Are stated output claims always comparable between brands?</span>
+              <span class="faq-icon">+</span>
+            </summary>
+            <div class="faq-body">
+              Not always. Output can change based on water quality, temperature, cycle time, and measurement method.
+              When comparing bottles, look for transparent test context (water type, timing, method) and clear warranty/support terms.
+            </div>
+          </details>
+
+          <details class="faq">
+            <summary>
+              <span>3) How often should I run a cycle?</span>
+              <span class="faq-icon">+</span>
+            </summary>
+            <div class="faq-body">
+              Most users run a cycle per fill, then drink shortly after. If you’re using hydrogen water for daily hydration,
+              consistency tends to matter more than doing longer or more frequent cycles.
+            </div>
+          </details>
+
+          <details class="faq">
+            <summary>
+              <span>4) Does bottle material matter?</span>
+              <span class="faq-icon">+</span>
+            </summary>
+            <div class="faq-body">
+              Material impacts durability, taste, and cleaning. Glass can feel “cleaner” taste-wise for some people and is easier to inspect,
+              while silicone components can help with impact resistance. Build quality and sealing matter just as much as material type.
+            </div>
+          </details>
+
+          <details class="faq">
+            <summary>
+              <span>5) Can I use tap water or do I need filtered water?</span>
+              <span class="faq-icon">+</span>
+            </summary>
+            <div class="faq-body">
+              Many people use tap water; filtered water can help taste and reduce mineral build-up over time.
+              If your water is very hard, you may need more frequent cleaning/maintenance.
+            </div>
+          </details>
+
+          <details class="faq">
+            <summary>
+              <span>6) What should I prioritise when choosing a bottle?</span>
+              <span class="faq-icon">+</span>
+            </summary>
+            <div class="faq-body">
+              For most buyers: (1) clear specs and documentation, (2) warranty/support terms, (3) build quality and sealing,
+              and (4) total value after NZD conversion and shipping.
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <script>
     /* ==========================================================================
-       DATA (update links/prices here)
-       - IMPORTANT: You asked for accurate NZD pricing only.
-         I have set placeholders for Echo + Evolved NZD — update these to your verified NZD amounts.
+       DATA
+       - NOTE: NZD-only pricing as requested
        ========================================================================== */
 
     const products = [
@@ -769,10 +907,10 @@
         image: "./hydrotech.png",
         url: "https://hydrotechnz.com/",
         score: 9.8,
-        rating: 5.0, // MUST be 5 stars
+        rating: 5.0,
         pill: { type:"editors", text:"Editor's Choice" },
         details: {
-          description: "Balanced pick for NZ buyers: premium build, strong protections, and value positioning.",
+          description: "Rank #1 overall for NZ buyers. A balanced premium pick that focuses on real-world use: build quality, protections, and value. The core USP is getting a premium experience (materials, finish, and support) without paying the highest international price tier.",
           specs: [
             { k:"Stated Output", v:"Up to 3.8ppm" },
             { k:"Capacity", v:"470ml" },
@@ -783,7 +921,9 @@
           ]
         },
         priceNZD: 179,
-        output: "Up to 3.8ppm"
+        output: "Up to 3.8ppm",
+        build: "Glass + Stainless",
+        warranty: "12 months"
       },
       {
         rank: 2,
@@ -791,22 +931,23 @@
         image: "./echo.png",
         url: "https://www.echowater.com/",
         score: 9.3,
-        rating: 4.5, // MUST be 4.5
+        rating: 4.5,
         pill: { type:"highoutput", text:"High Output" },
         details: {
-          description: "Premium option with a strong stated feature set. Higher total cost after NZD conversion.",
+          description: "Rank #2 for power/features. Best suited for buyers who prioritise maximum stated output and premium ecosystem positioning, accepting a higher total NZD cost. Strong warranty period is a key advantage.",
           specs: [
-            { k:"Stated Output", v:"High output (stated)" },
-            { k:"Controls", v:"App / Smart (stated)" },
-            { k:"Material", v:"Premium build (stated)" },
-            { k:"Warranty", v:"Long warranty (stated)" },
+            { k:"Stated Output", v:"Up to 8.0ppm" },             // UPDATED
+            { k:"Build", v:"Glass + Silicone" },                // UPDATED
+            { k:"Warranty", v:"5 years" },                      // UPDATED
+            { k:"Controls", v:"Premium controls (stated)" },
             { k:"Support", v:"International" },
-            { k:"Notes", v:"Verify specs/policies" },
+            { k:"Notes", v:"Verify specs/policies on seller site" },
           ]
         },
-        // TODO: replace with your verified NZD price
-        priceNZD: 499,
-        output: "High output (stated)"
+        priceNZD: 499,  // keep/update as you verify
+        output: "Up to 8.0ppm",         // UPDATED
+        build: "Glass + Silicone",      // UPDATED
+        warranty: "5 years"             // UPDATED
       },
       {
         rank: 3,
@@ -814,21 +955,23 @@
         image: "./ionza.png",
         url: "#",
         score: 8.1,
-        rating: 3.8, // MUST be 3.8
+        rating: 3.8,
         pill: { type:"features", text:"Feature Kit" },
         details: {
-          description: "Feature-focused kit with stated output up to 2.5ppm.",
+          description: "Rank #3 for kit-style offering. A reasonable option if you want a bundled setup and a simpler feature list. The most important USP here is the stated output ceiling (up to 2.5ppm) — if you’re expecting higher stated outputs, this tends to land mid-pack.",
           specs: [
-            { k:"Stated Output", v:"Up to 2.5ppm" }, // REQUIRED
+            { k:"Stated Output", v:"Up to 2.5ppm" },
             { k:"Format", v:"Bottle kit" },
             { k:"Material", v:"Glass (stated)" },
-            { k:"Warranty", v:"Varies" },
-            { k:"Support", v:"Varies" },
-            { k:"Notes", v:"Check documentation" },
+            { k:"Warranty", v:"not specified" },  // UPDATED in comparison rendering logic too
+            { k:"Support", v:"not specified" },
+            { k:"Notes", v:"Check documentation before purchase" },
           ]
         },
         priceNZD: 279,
-        output: "Up to 2.5ppm"
+        output: "Up to 2.5ppm",
+        build: "Glass (stated)",
+        warranty: "not specified"
       },
       {
         rank: 4,
@@ -839,19 +982,20 @@
         rating: 3.5,
         pill: { type:"budget", text:"Lower Cost" },
         details: {
-          description: "Lower priced alternative with strong claims — recommended to verify documentation and warranty.",
+          description: "Rank #4 for budget-first shoppers. The USP is lower entry price in NZD, but you’re typically trading off clarity around documentation, long-term support, and protections. Best for buyers who want to try the category without committing to a premium tier.",
           specs: [
-            { k:"Claims", v:"Verify documentation" },
-            { k:"Material", v:"Varies" },
-            { k:"Warranty", v:"Varies" },
-            { k:"Support", v:"Varies" },
-            { k:"Notes", v:"Check policies" },
+            { k:"Claims", v:"Check listing details" },
+            { k:"Material", v:"Varies by listing" },
+            { k:"Warranty", v:"not specified" },
+            { k:"Support", v:"not specified" },
+            { k:"Notes", v:"Confirm policies before buying" },
             { k:"Use", v:"Everyday" },
           ]
         },
-        // TODO: replace with your verified NZD price
-        priceNZD: 169,
-        output: "Claims vary"
+        priceNZD: 169,  // update as you verify
+        output: "Claims vary",
+        build: "Varies by listing",
+        warranty: "not specified"
       },
       {
         rank: 5,
@@ -862,29 +1006,27 @@
         rating: 3.2,
         pill: { type:"alt", text:"Alternative" },
         details: {
-          description: "A higher-priced NZ option — confirm policies, output documentation, and support expectations.",
+          description: "Rank #5 for value comparison. At $339 NZD, it sits in a premium price band, so the main question is whether the listing provides enough clarity on specs, support, and protections to justify the cost. Best if you’ve confirmed the details match your priorities.",
           specs: [
             { k:"Price Tier", v:"Premium" },
-            { k:"Support", v:"Local (varies)" },
-            { k:"Warranty", v:"Varies" },
+            { k:"Support", v:"not specified" },
+            { k:"Warranty", v:"not specified" },
             { k:"Output", v:"Verify documentation" },
             { k:"Notes", v:"Check policies" },
             { k:"Best For", v:"Specific needs" },
           ]
         },
-        // REQUIRED: Grounded Kiwi costs $339
         priceNZD: 339,
-        output: "Verify documentation"
+        output: "Verify documentation",
+        build: "Varies by listing",
+        warranty: "not specified"
       }
     ];
 
     /* ==========================================================================
        RANKED CARDS RENDER (UPDATED)
-       - Separate vertical cards
-       - Product description + green tick benefits
-       - Hydrotech has 6 USPs, others 4
-       - Verdict label under stars: Outstanding -> ... -> Good
-       - Do not mention Hydrotech on any other brand card (no Hydrotech references in other cards)
+       - Benefits grid: 3x3 for #1 (6 items), 2x2 for others (4 items)
+       - More in-depth product description per brand identifying rank + USPs
        ========================================================================== */
 
     const checkIcon = `
@@ -909,48 +1051,48 @@
       5: "Good"
     };
 
+    // In-depth descriptions, rank-aware, and clarify USPs
     const descByRank = {
-      1: "Best overall pick for NZ buyers combining performance, build quality, protections, and value-for-money.",
-      2: "A premium, feature-rich option with strong stated specs, but higher total NZD cost.",
-      3: "A feature-focused kit with a premium price, with stated output up to 2.5ppm.",
-      4: "Lower-priced alternative with strong claims; recommended to verify documentation and policies.",
-      5: "An alternative option where specs, support and warranty handling can vary."
+      1: "Rank #1 (Best Overall): The clear winner for NZ buyers because it balances a premium feel with practical protections. The strongest USPs are its overall value positioning, premium materials/finish, and the combination of warranty + guarantee that reduces purchase risk for everyday use.",
+      2: "Rank #2 (High Output / Premium): This is the pick for buyers who prioritise the highest stated output and a premium build spec. Its main USPs are the stated output ceiling (up to 8.0ppm), the Glass + Silicone build, and a long 5-year warranty — typically at a higher total NZD cost.",
+      3: "Rank #3 (Feature Kit): A mid-pack choice with a kit-style presentation. Its clearest USP is the stated output limit (up to 2.5ppm) paired with a simpler, practical feature set. Best if you want a straightforward option and have confirmed support/warranty details from the seller.",
+      4: "Rank #4 (Lower Cost): A budget-first option that can make sense if the priority is a lower NZD entry point. The USPs here are affordability and basic portability, with the trade-off being less clarity around protections and long-term support depending on the listing.",
+      5: "Rank #5 (Alternative): A premium NZD price ($339) that competes with higher-ranked options on cost. The key USP is brand preference if you’ve validated specs and protections; otherwise it’s harder to justify the price without clearer documentation on output, warranty, and support."
     };
 
-    // USPs: Hydrotech = 6, others = 4
-    // IMPORTANT: No Hydrotech mentions in other brand cards.
+    // USPs: #1 has 6, others have 4
     const uspByRank = {
       1: [
-        "Best overall value + trust signals for NZ buyers",
-        "Up to 3.8ppm (3,800ppb) performance claim",
-        "Premium glass build + stainless finishes",
-        "USB-C charging with fast cycle convenience",
-        "Strong protections: 12-month warranty + 30-day guarantee",
-        "Includes accessories + local support experience"
+        "Best overall value for NZ buyers",
+        "Up to 3.8ppm (3,800ppb) claim",
+        "Premium glass + stainless finish",
+        "USB-C charging convenience",
+        "12-month warranty protection",
+        "30-day guarantee reduces risk"
       ],
       2: [
-        "Premium feature set (stated)",
-        "High output claims (stated)",
-        "Long warranty offering (stated)",
-        "International brand support (varies)"
+        "Up to 8.0ppm stated output",
+        "Glass + Silicone build",
+        "5-year warranty coverage",
+        "Premium ecosystem positioning"
       ],
       3: [
-        "Kit includes accessories (stated)",
-        "Glass construction (stated)",
-        "Output up to 2.5ppm (stated)",
-        "Support/warranty varies by seller"
+        "Up to 2.5ppm stated output",
+        "Kit-style offering (stated)",
+        "Straightforward feature set",
+        "Policies vary by seller"
       ],
       4: [
-        "Lower upfront cost vs premium models",
-        "Portable for everyday use",
-        "Claims may vary by listing",
-        "Check warranty/support before buying"
+        "Lower NZD entry price",
+        "Everyday portability",
+        "Claims vary by listing",
+        "Protections not specified"
       ],
       5: [
-        "Premium NZ price tier",
+        "Premium NZD price tier",
         "Specs vary by listing",
-        "Confirm warranty handling",
-        "Verify output/materials before purchase"
+        "Warranty not specified",
+        "Verify output documentation"
       ]
     };
 
@@ -964,6 +1106,8 @@
 
       const bullets = (uspByRank[p.rank] || []).map(b => `<li>${checkIcon}<span>${b}</span></li>`).join("");
 
+      const gridClass = (p.rank === 1) ? "grid-3x3" : "grid-2x2";
+
       row.innerHTML = `
         <div class="rank-badge">${p.rank}</div>
 
@@ -976,7 +1120,7 @@
           <div class="rank-name">${p.name}</div>
           <div class="rank-desc">${descByRank[p.rank] || ""}</div>
 
-          <ul class="benefits" aria-label="Key benefits">
+          <ul class="benefits ${gridClass}" aria-label="Key benefits">
             ${bullets}
           </ul>
 
@@ -1020,16 +1164,34 @@
     });
 
     /* ==========================================================================
-       QUICK COMPARISON RENDER
-       - All NZD
-       - Hydrotech highlighted in gold style ONLY here
+       QUICK COMPARISON RENDER (UPDATED)
+       - Echo output = up to 8.0ppm
+       - Echo build = Glass + Silicone
+       - Echo warranty = 5 years
+       - Any "Varies" warranty -> "not specified"
        ========================================================================== */
+
     const compareBody = document.getElementById("compareBody");
     compareBody.innerHTML = "";
+
+    function normalizeWarranty(w){
+      if(!w) return "not specified";
+      const v = String(w).trim().toLowerCase();
+      if(v === "varies") return "not specified";
+      return w;
+    }
 
     products.forEach((p) => {
       const tr = document.createElement("tr");
       if (p.rank === 1) tr.className = "winner-row";
+
+      // Build + warranty explicitly from data (with fallback)
+      const build = p.build || (p.details?.specs || []).find(s => s.k === "Build")?.v || (p.details?.specs || []).find(s => s.k === "Material")?.v || "—";
+      const warranty = normalizeWarranty(
+        p.warranty ||
+        (p.details?.specs || []).find(s => s.k === "Warranty")?.v ||
+        "not specified"
+      );
 
       tr.innerHTML = `
         <td>
@@ -1039,20 +1201,28 @@
               <div>${p.name}
                 ${p.rank === 1 ? `<span class="winner-tag">Winner</span>` : ``}
               </div>
-              <div class="muted">${p.rank === 1 ? "Best overall value + protections" : "Quick summary (see details above)"}</div>
+              <div class="muted">${p.rank === 1 ? "Best overall value + protections" : "Quick summary (see ranked cards above)"}</div>
             </div>
           </div>
         </td>
         <td><strong>$${Number(p.priceNZD).toFixed(0)}</strong></td>
         <td>${p.output || "—"}</td>
-        <td>${(p.details?.specs || []).find(s => s.k === "Material")?.v || "—"}</td>
-        <td>${(p.details?.specs || []).find(s => s.k === "Warranty")?.v || "Varies"}</td>
+        <td>${build}</td>
+        <td>${warranty}</td>
       `;
       compareBody.appendChild(tr);
+    });
+
+    /* FAQ icon toggle (+ / −) */
+    document.querySelectorAll("details.faq").forEach((d) => {
+      d.addEventListener("toggle", () => {
+        const icon = d.querySelector(".faq-icon");
+        if(!icon) return;
+        icon.textContent = d.open ? "−" : "+";
+      });
     });
   </script>
 
 </body>
 </html>
 ```
-

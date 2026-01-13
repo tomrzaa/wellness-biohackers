@@ -148,7 +148,7 @@
        HERO
        ========================================================================== */
     .hero{
-      padding: 26px 0 12px;
+      padding: 20px 0 12px;
     }
     .hero-card{
       background: var(--card);
@@ -157,7 +157,7 @@
       box-shadow: 0 14px 30px rgba(2,6,23,.06);
       overflow:hidden;
       display:grid;
-      grid-template-columns: 1.15fr .85fr;
+      grid-template-columns: 1.3fr .7fr;
       gap: 0;
     }
     .hero-left{
@@ -190,27 +190,43 @@
       line-height: 1.6;
       max-width: 70ch;
     }
+    .hero-features{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 16px;
+      margin: 20px 0;
+    }
+    .hero-feature{
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--text);
+    }
+    .hero-feature .check{
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
     .hero-actions{
       display:flex;
       gap: 10px;
       flex-wrap:wrap;
-      margin-top: 16px;
+      margin-top: 20px;
     }
     .hero-right{
-      background: radial-gradient(1200px 500px at 10% 0%, rgba(31,111,235,.12), transparent 60%);
+      background: linear-gradient(135deg, #f8fafc 0%, #eef2f7 100%);
       border-left: 1px solid var(--border);
       display:flex;
       align-items:center;
       justify-content:center;
-      padding: 18px;
+      padding: 16px;
     }
     .hero-right img{
       width: 100%;
-      max-width: 420px;
+      max-width: 320px;
       height: auto;
       display:block;
       object-fit: contain;
-      filter: saturate(1.02);
     }
 
     /* Buttons */
@@ -1010,6 +1026,89 @@
       .sticky-title{ font-size: 13px; }
       .sticky-cta{ padding: 10px 16px; font-size: 13px; }
     }
+
+    /* ==========================================================================
+       FOOTER
+       ========================================================================== */
+    .site-footer{
+      background: #fff;
+      border-top: 1px solid var(--border);
+      padding: 40px 0 30px;
+      margin-bottom: 80px;
+    }
+    .footer-inner{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .footer-top{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .footer-brand{
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .footer-logo{
+      height: 32px;
+      width: auto;
+    }
+    .footer-brand-text{
+      font-family: var(--font-serif);
+      font-weight: 600;
+      font-size: 18px;
+      color: var(--text);
+    }
+    .footer-links{
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .footer-links a{
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color .15s ease;
+    }
+    .footer-links a:hover{
+      color: var(--text);
+    }
+    .footer-bottom{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+    .footer-copy{
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .footer-disclaimer{
+      font-size: 12px;
+      color: var(--muted);
+      max-width: 600px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 640px){
+      .footer-top{
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .footer-bottom{
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
   </style>
 </head>
 
@@ -1055,6 +1154,34 @@
             A clear comparison based on stated output, build, protections and total value for NZ buyers.
             Start with the ranked cards — then jump to the quick comparison table.
           </p>
+          
+          <div class="hero-features">
+            <div class="hero-feature">
+              <span class="check" aria-hidden="true">
+                <svg viewBox="0 0 20 20"><path d="M8.2 14.6 3.9 10.3l1.4-1.4 2.9 2.9 6.5-6.5 1.4 1.4-7.9 7.9z"/></svg>
+              </span>
+              <span>5 bottles independently reviewed</span>
+            </div>
+            <div class="hero-feature">
+              <span class="check" aria-hidden="true">
+                <svg viewBox="0 0 20 20"><path d="M8.2 14.6 3.9 10.3l1.4-1.4 2.9 2.9 6.5-6.5 1.4 1.4-7.9 7.9z"/></svg>
+              </span>
+              <span>NZD pricing for easy comparison</span>
+            </div>
+            <div class="hero-feature">
+              <span class="check" aria-hidden="true">
+                <svg viewBox="0 0 20 20"><path d="M8.2 14.6 3.9 10.3l1.4-1.4 2.9 2.9 6.5-6.5 1.4 1.4-7.9 7.9z"/></svg>
+              </span>
+              <span>Warranty &amp; protection details</span>
+            </div>
+            <div class="hero-feature">
+              <span class="check" aria-hidden="true">
+                <svg viewBox="0 0 20 20"><path d="M8.2 14.6 3.9 10.3l1.4-1.4 2.9 2.9 6.5-6.5 1.4 1.4-7.9 7.9z"/></svg>
+              </span>
+              <span>Stated output &amp; build quality</span>
+            </div>
+          </div>
+          
           <div class="hero-actions">
             <a class="btn btn-primary" href="#rankings">View #1 Pick →</a>
             <a class="btn btn-outline" href="#comparison">Compare all 5 →</a>
@@ -1207,6 +1334,33 @@
       <div id="top3Grid" class="top3-grid"></div>
     </div>
   </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-top">
+          <a class="footer-brand" href="#">
+            <img class="footer-logo" src="./8316c34b-db2b-4e4a-96ae-250104ae6f96.png" alt="WellnessBiohackers">
+            <span class="footer-brand-text">WellnessBiohackers</span>
+          </a>
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Cookie Policy</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-copy">© 2026 WellnessBiohackers</div>
+          <div class="footer-disclaimer">
+            Advertiser Disclosure: This site may receive compensation from the companies whose products we review. This does not influence our evaluations.
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <!-- ==========================================================================
        STICKY BOTTOM BAR

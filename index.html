@@ -291,7 +291,7 @@
 
     .rank-card{
       display:grid;
-      grid-template-columns: 64px 92px 1fr 240px;
+      grid-template-columns: 64px 140px 1fr 240px;
       gap: 14px;
       padding: 18px;
       align-items:start;
@@ -319,8 +319,8 @@
     }
 
     .product-thumb{
-      width: 92px;
-      height: 92px;
+      width: 140px;
+      height: 140px;
       border-radius: 12px;
       border: 1px solid var(--border);
       background: #fff;
@@ -330,8 +330,8 @@
       overflow:hidden;
     }
     .product-thumb img{
-      width: 86px;
-      height: 86px;
+      width: 130px;
+      height: 130px;
       object-fit: contain;
       display:block;
     }
@@ -575,7 +575,9 @@
     @media (max-width: 980px){
       .hero-card{ grid-template-columns: 1fr; }
       .hero-right{ border-left: none; border-top: 1px solid var(--border); }
-      .rank-card{ grid-template-columns: 60px 84px 1fr; }
+      .rank-card{ grid-template-columns: 60px 100px 1fr; }
+      .product-thumb{ width: 100px; height: 100px; }
+      .product-thumb img{ width: 90px; height: 90px; }
       .rank-side{
         grid-column: 1 / -1;
         flex-direction:row;
@@ -592,9 +594,9 @@
       .rank-name{ font-size: 16px; }
       .btn{ min-width: 0; width: 100%; }
       .btns{ width: 100%; }
-      .rank-card{ grid-template-columns: 56px 78px 1fr; padding: 12px; }
-      .product-thumb{ width: 78px; height: 78px; }
-      .product-thumb img{ width: 72px; height: 72px; }
+      .rank-card{ grid-template-columns: 56px 90px 1fr; padding: 12px; }
+      .product-thumb{ width: 90px; height: 90px; }
+      .product-thumb img{ width: 80px; height: 80px; }
       .badge-disclosure{ display:none; }
       .nav{ display:none; }
       .hero-title{ font-size: 26px; }
@@ -763,7 +765,7 @@
     <div class="container">
       <div class="header-inner">
         <a class="brand" href="#">
-          <img class="brand-logo" src="./wb-logo.png" alt="WellnessBiohackers" />
+          <img class="brand-logo" src="./8316c34b-db2b-4e4a-96ae-250104ae6f96.png" alt="WellnessBiohackers" />
           <div class="brand-text">
             <div class="brand-name">WellnessBiohackers</div>
             <div class="brand-tag">Optimize your health</div>
@@ -954,8 +956,8 @@
         url: "https://hydrotechnz.com/",
         score: 9.9,
         rating: 5.0,
-        pill: { type:"editors", text:"World's Best Hydrogen Water Bottle" },
-        promoPill: "SAVE $50 + FREE shipping NZ-wide",
+        pill: { type:"editors", text:"Top Rated Hydrogen Water Bottle" },
+        promoPill: "Fast New Zealand Delivery",
         details: {
           description: "Rank #1 overall for NZ buyers. A balanced premium pick that focuses on real-world use: build quality, protections, and value. The core USP is getting a premium experience (materials, finish, and support) without paying the highest international price tier.",
           specs: [
@@ -980,7 +982,6 @@
         score: 9.8,
         rating: 4.5,
         pill: { type:"highoutput", text:"Best High Output" },
-        promoPill: "Get $225 OFF with code CYB",
         details: {
           description: "Rank #2 for power/features. Best suited for buyers who prioritise maximum stated output and premium ecosystem positioning, accepting a higher total NZD cost. Strong warranty period is a key advantage.",
           specs: [

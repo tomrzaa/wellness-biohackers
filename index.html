@@ -1594,7 +1594,7 @@
           </div>
           <div class="sticky-info">
             <div class="sticky-badge">Rank #1 Winner</div>
-            <div class="sticky-title">Hydrotech NZ Hydrogen Water Bottle</div>
+            <div class="sticky-title">Fast New Zealand Delivery</div>
           </div>
         </div>
         <a class="sticky-cta" href="https://hydrotechnz.com/products/hydrotech-water-bottle?utm_source=wellnessbiohackers&utm_medium=affiliate&utm_campaign=hydrogen-bottle-review&utm_content=sticky-bar" target="_blank" rel="nofollow sponsored noopener">
@@ -1942,7 +1942,7 @@
     const top3Specs = {
       1: [
         { label: "Cycle time", value: "5 minutes" },
-        { label: "NZ-based", value: "Yes" }
+        { label: "Local shipping", value: "Yes" }
       ],
       2: [
         { label: "Cycle time", value: "10 minutes" },
@@ -2006,6 +2006,130 @@
 
       top3Grid.appendChild(card);
     });
+
+    /* ==========================================================================
+       GEOLOCATION - NZ vs AU messaging
+       ========================================================================== */
+    (async function detectCountry() {
+      const geoConfig = {
+        NZ: {
+          country: "New Zealand",
+          countryShort: "NZ",
+          delivery: "Fast New Zealand Delivery",
+          buyersText: "NZ Buyers",
+          currency: "NZD"
+        },
+        AU: {
+          country: "Australia", 
+          countryShort: "AU",
+          delivery: "Fast Australian Delivery",
+          buyersText: "Australian Buyers",
+          currency: "AUD"
+        }
+      };
+
+      // Default to NZ
+      let userCountry = "NZ";
+
+      try {
+        // Using free ipapi.co service
+        const response = await fetch("https://ipapi.co/json/", { 
+          timeout: 3000 
+        });
+        const data = await response.json();
+        
+        if (data.country_code === "AU") {
+          userCountry = "AU";
+        }
+      } catch (error) {
+        console.log("Geolocation failed, defaulting to NZ");
+      }
+
+      const config = geoConfig[userCountry];
+
+      // Update page content based on location
+      function updateContent() {
+        // Update hero title
+        const heroTitle = document.querySelector(".hero-title");
+        if (heroTitle) {
+          heroTitle.textContent = `Best Hydrogen Water Bottles for ${config.buyersText}`;
+        }
+
+        // Update section title
+        const sectionTitles = document.querySelectorAll(".section-title");
+        sectionTitles.forEach(title => {
+          if (title.textContent.includes("NZ Buyers") || title.textContent.includes("Australian Buyers")) {
+            title.textContent = title.textContent.replace(/NZ Buyers|Australian Buyers/g, config.buyersText);
+          }
+        });
+
+        // Update promo pills with delivery messaging
+        const promoPills = document.querySelectorAll(".pill.promo");
+        promoPills.forEach(pill => {
+          if (pill.textContent.includes("Delivery")) {
+            pill.textContent = config.delivery;
+          }
+        });
+
+        // Update top3 promo badges
+        const top3Promos = document.querySelectorAll(".top3-promo");
+        top3Promos.forEach(promo => {
+          if (promo.textContent.includes("Delivery")) {
+            promo.textContent = config.delivery;
+          }
+        });
+
+        // Update sticky bar title
+        const stickyTitle = document.querySelector(".sticky-title");
+        if (stickyTitle && stickyTitle.textContent.includes("Delivery")) {
+          stickyTitle.textContent = config.delivery;
+        }
+
+        // Update intro text
+        const introTexts = document.querySelectorAll(".intro-text");
+        introTexts.forEach(text => {
+          text.innerHTML = text.innerHTML
+            .replace(/NZ buyers/g, `${config.countryShort} buyers`)
+            .replace(/New Zealand/g, config.country);
+        });
+
+        // Update comparison table header
+        const compareHeadLeft = document.querySelector(".compare-head .left");
+        if (compareHeadLeft) {
+          compareHeadLeft.textContent = `Side-by-side (${config.currency})`;
+        }
+
+        const compareHeadRight = document.querySelector(".compare-head .right");
+        if (compareHeadRight) {
+          compareHeadRight.textContent = `All prices shown in ${config.currency} for clarity`;
+        }
+
+        // Update hero features
+        const heroFeatures = document.querySelectorAll(".hero-feature span:last-child");
+        heroFeatures.forEach(feature => {
+          if (feature.textContent.includes("NZD")) {
+            feature.textContent = feature.textContent.replace("NZD", config.currency);
+          }
+        });
+
+        // Update table header for price column
+        const priceHeader = document.querySelector(".compare-table th:nth-child(2)");
+        if (priceHeader) {
+          priceHeader.textContent = `Price (${config.currency})`;
+        }
+
+        // Update FAQ text
+        const faqBodies = document.querySelectorAll(".faq-body");
+        faqBodies.forEach(faq => {
+          faq.innerHTML = faq.innerHTML
+            .replace(/NZD/g, config.currency);
+        });
+
+        console.log(`Content updated for ${config.country}`);
+      }
+
+      updateContent();
+    })();
   </script>
 
 </body>

@@ -1,1264 +1,1174 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Top Hydrogen Water Bottles (2026) - Rankings & Reviews</title>
-  <meta name="description" content="Independent rankings of hydrogen water bottles for 2026. Compare H2 output, build quality, warranties, and value." />
+  <title>Best Hydrogen Water Bottles NZ (2026) - Expert Reviews & Rankings</title>
+  <meta name="description" content="Independent reviews and rankings of the best hydrogen water bottles available in New Zealand for 2026." />
 
   <style>
-    /* =========================================================
-       GLOBAL / THEME (Wellness Pulse-style: clean, modern)
-    ========================================================= */
+    /* ==========================================================================
+       GLOBAL / TOKENS (match clean WellnessPulse-style look)
+       ========================================================================== */
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root{
-      --primary:#0b63ce;
-      --primary-dark:#094fa6;
-      --secondary:#15a37a;
-      --accent:#ff9500;
-      --text:#1f2937;
-      --text-light:#6b7280;
+      --blue:#1f6feb;
+      --blue-dark:#1857bd;
+      --green:#16a34a;
+      --green-dark:#15803d;
+      --gold:#f5c451;
+      --gold-soft:#fff7df;
+      --text:#0f172a;
+      --muted:#64748b;
       --bg:#ffffff;
       --bg-alt:#f6f8fb;
       --border:#e5e7eb;
-      --star:#fbbf24;
-
-      /* Winner (gold) styling */
-      --gold:#d4af37;
-      --gold-soft:#fff7dc;
-      --gold-border:#f1d36a;
+      --shadow: 0 10px 30px rgba(2, 6, 23, .06);
+      --radius: 14px;
     }
 
     body{
-      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;
-      line-height:1.7;
-      color:var(--text);
-      background:var(--bg);
-      padding-bottom:92px; /* for sticky CTA */
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, "Helvetica Neue", Helvetica, sans-serif;
+      line-height: 1.55;
+      color: var(--text);
+      background: var(--bg);
+      padding-bottom: 64px;
     }
 
-    .container{ max-width: 1120px; margin:0 auto; padding:0 1.25rem; }
+    .container{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 18px;
+    }
 
-    /* =========================================================
-       HEADER
-    ========================================================= */
+    a{ color: inherit; }
+    .sr-only{
+      position:absolute!important; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
+    }
+
+    /* ==========================================================================
+       HEADER (logo + disclosure) + HERO
+       ========================================================================== */
     .site-header{
-      background:#fff;
-      border-bottom:1px solid var(--border);
-      padding:0.85rem 0;
-      position:sticky;
-      top:0;
-      z-index:100;
-      box-shadow:0 1px 3px rgba(0,0,0,0.04);
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 50;
     }
+
     .header-content{
       display:flex;
-      justify-content:space-between;
       align-items:center;
-      gap:1rem;
+      justify-content:space-between;
+      gap: 12px;
+      padding: 12px 0;
     }
+
     .brand{
       display:flex;
       align-items:center;
-      gap:0.75rem;
+      gap: 12px;
       text-decoration:none;
-      color:inherit;
-      min-width:0;
-    }
-    .brand-logo{
-      height:36px;
-      width:auto;
-      display:block;
-    }
-    .disclosure-btn{
-      color:var(--text-light);
-      font-size:0.8125rem;
-      padding:0.5rem 0.875rem;
-      border:1px solid var(--border);
-      border-radius:8px;
-      background:#fff;
-      cursor:pointer;
-      transition:all 0.2s;
-      font-weight:600;
-      white-space:nowrap;
-    }
-    .disclosure-btn:hover{
-      border-color:var(--primary);
-      color:var(--primary);
-      background:#f8fafc;
+      min-width: 220px;
     }
 
-    /* =========================================================
-       DISCLOSURE MODAL (kept for compliance, but no inline sales copy)
-    ========================================================= */
+    /* NOTE: Upload your attached logo into the repo root as: logo.png */
+    .brand img{
+      height: 36px;
+      width: auto;
+      display:block;
+    }
+
+    .disclosure-btn{
+      color: var(--muted);
+      font-size: 13px;
+      padding: 9px 12px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: #fff;
+      cursor: pointer;
+      transition: all .15s ease;
+      font-weight: 600;
+    }
+    .disclosure-btn:hover{
+      border-color: rgba(31,111,235,.35);
+      color: var(--blue);
+      background: #f8fbff;
+    }
+
     dialog{
       border:none;
-      border-radius:12px;
+      border-radius: 14px;
       padding:0;
-      max-width:560px;
-      width:92%;
-      box-shadow:0 20px 25px -5px rgba(0,0,0,0.1),0 10px 10px -5px rgba(0,0,0,0.04);
+      max-width: 580px;
+      width: 92%;
+      box-shadow: 0 20px 30px rgba(2,6,23,.18);
     }
-    dialog::backdrop{ background:rgba(0,0,0,0.4); }
-    .modal-content{ padding:1.75rem; }
+    dialog::backdrop{ background: rgba(2,6,23,.45); }
+
+    .modal-content{ padding: 18px; }
     .modal-header{
       display:flex;
       justify-content:space-between;
       align-items:flex-start;
-      gap:1rem;
-      margin-bottom:1.15rem;
-      padding-bottom:0.95rem;
-      border-bottom:1px solid var(--border);
+      gap: 12px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 12px;
     }
-    .modal-header h2{
-      font-size:1.25rem;
-      font-weight:800;
-      letter-spacing:-0.01em;
-      color:var(--text);
-    }
+    .modal-header h2{ font-size: 18px; font-weight: 800; }
     .modal-close{
-      font-size:1.75rem;
-      color:var(--text-light);
-      background:none;
+      font-size: 24px;
+      line-height: 1;
       border:none;
-      cursor:pointer;
-      width:34px;
-      height:34px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      border-radius:8px;
-      transition:all 0.2s;
-      flex:0 0 auto;
+      background: transparent;
+      cursor: pointer;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      color: var(--muted);
     }
-    .modal-close:hover{ color:var(--text); background:var(--bg-alt); }
-    .modal-body{ color:var(--text-light); font-size:0.9375rem; line-height:1.7; }
-    .modal-body p{ margin-bottom:0.875rem; }
-    .modal-body p:last-child{ margin-bottom:0; }
+    .modal-close:hover{ background: var(--bg-alt); color: var(--text); }
+    .modal-body{ color: var(--muted); font-size: 14px; }
+    .modal-body p{ margin-bottom: 10px; }
 
-    /* =========================================================
-       HERO
-    ========================================================= */
+    /* HERO */
     .hero{
-      background:linear-gradient(135deg,#4f7df6 0%,#6a46a7 100%);
-      color:#fff;
-      padding:2.25rem 0 2.4rem;
-      margin-bottom:2rem;
+      background: linear-gradient(180deg, #f8fbff 0%, #ffffff 70%);
+      padding: 26px 0 18px;
     }
     .hero-grid{
       display:grid;
-      grid-template-columns:1.15fr 0.85fr;
-      gap:1.75rem;
+      grid-template-columns: 1.2fr .8fr;
       align-items:center;
+      gap: 22px;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: 0 6px 18px rgba(2,6,23,.05);
     }
     .update-badge{
-      display:inline-block;
-      background:rgba(255,255,255,0.18);
-      backdrop-filter:blur(10px);
-      padding:0.35rem 0.85rem;
-      border-radius:999px;
-      font-size:0.8125rem;
-      font-weight:700;
-      margin-bottom:0.9rem;
+      display:inline-flex;
+      align-items:center;
+      gap: 8px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #eef6ff;
+      color: var(--blue);
+      font-weight: 800;
+      font-size: 12px;
+      width: fit-content;
+      margin-bottom: 10px;
     }
     .hero h1{
-      font-size:2.15rem;
-      line-height:1.12;
-      letter-spacing:-0.02em;
-      font-weight:900;
-      margin-bottom:0.9rem;
+      font-size: 30px;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+      font-weight: 900;
     }
-    .hero-intro{
-      font-size:1.03rem;
-      opacity:0.95;
-      line-height:1.6;
-      max-width:720px;
-    }
-    .hero-image-wrap{ display:flex; justify-content:center; }
-    .hero-image{
-      width:100%;
-      max-width:410px;
-      height:auto;
-      border-radius:16px;
-      box-shadow:0 18px 40px rgba(0,0,0,0.25);
-      background:rgba(255,255,255,0.08);
+    .hero p{
+      color: var(--muted);
+      font-size: 15px;
+      max-width: 62ch;
     }
 
-    /* =========================================================
+    /* NOTE: you already uploaded hero-scientists.png */
+    .hero-media{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+    .hero-media img{
+      width: 100%;
+      max-width: 320px;
+      height: auto;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: #fff;
+      box-shadow: 0 10px 24px rgba(2,6,23,.08);
+    }
+
+    /* ==========================================================================
        QUICK NAV
-    ========================================================= */
+       ========================================================================== */
     .quick-nav{
-      background:var(--bg-alt);
-      border:1px solid var(--border);
-      border-radius:12px;
-      padding:1.05rem 1.15rem;
-      margin-bottom:1.75rem;
+      margin: 14px 0 18px;
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 12px 14px;
+    }
+    .quick-nav-top{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap: 10px;
+      margin-bottom: 10px;
     }
     .quick-nav h3{
-      font-size:0.82rem;
-      font-weight:900;
-      color:var(--text-light);
-      text-transform:uppercase;
-      letter-spacing:0.06em;
-      margin-bottom:0.8rem;
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 900;
+    }
+    .quick-nav .hint{
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 600;
     }
     .quick-nav-list{
       display:flex;
+      gap: 10px;
       flex-wrap:wrap;
-      gap:0.6rem;
       list-style:none;
     }
     .quick-nav-list a{
-      display:block;
-      padding:0.45rem 0.9rem;
+      display:inline-flex;
+      padding: 9px 12px;
+      border-radius: 12px;
       background:#fff;
-      border:1px solid var(--border);
-      border-radius:10px;
-      color:var(--text);
+      border: 1px solid var(--border);
       text-decoration:none;
-      font-size:0.875rem;
-      font-weight:700;
-      transition:all 0.2s;
+      font-weight: 800;
+      font-size: 13px;
+      transition: all .15s ease;
     }
     .quick-nav-list a:hover{
-      border-color:var(--primary);
-      color:var(--primary);
-      background:#f8fafc;
+      border-color: rgba(31,111,235,.35);
+      color: var(--blue);
+      background: #f8fbff;
     }
 
-    /* =========================================================
-       RANKING SECTION (compact cards + no overlap)
-    ========================================================= */
-    .rankings-section{ margin-bottom:2.25rem; }
-
-    .ranking-header-row{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:0 0.25rem;
-      margin-bottom:0.75rem;
-    }
-    .ranking-header-row h2{
-      font-size:1.55rem;
-      font-weight:900;
-      letter-spacing:-0.02em;
-    }
-    .ranking-header-row .subtle{
-      color:var(--text-light);
-      font-size:0.9rem;
-      font-weight:600;
+    /* ==========================================================================
+       RANKINGS (compact list, WellnessPulse-like layout)
+       - IMPORTANT: no gold outline in rankings (per request)
+       ========================================================================== */
+    .section-title{
+      font-size: 18px;
+      font-weight: 900;
+      margin: 18px 0 10px;
+      letter-spacing: -0.01em;
     }
 
-    .ranking-card{
+    .rankings-wrap{
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
       background:#fff;
-      border:1px solid var(--border);
-      border-radius:14px;
-      overflow:hidden;
-      margin-bottom:1rem;
-      transition:box-shadow 0.25s, transform 0.2s;
-    }
-    .ranking-card:hover{
-      transform:translateY(-1px);
-      box-shadow:0 10px 28px rgba(0,0,0,0.07);
+      box-shadow: 0 10px 22px rgba(2,6,23,.05);
     }
 
-    /* Top bar: keep badges INLINE (no absolute ribbons) so score is never covered */
-    .card-top-bar{
-      background:linear-gradient(135deg,#f7fafc 0%,#eef2f7 100%);
-      padding:0.85rem 1rem;
+    .rankings-head{
+      padding: 12px 14px;
+      background: #fbfcff;
+      border-bottom: 1px solid var(--border);
       display:flex;
       justify-content:space-between;
       align-items:center;
-      gap:0.75rem;
-      border-bottom:1px solid var(--border);
+      gap: 12px;
     }
-    .card-top-left{
-      display:flex;
+    .rankings-head .left{
+      font-weight: 900;
+      font-size: 16px;
+    }
+    .rankings-head .right{
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .rank-row{
+      display:grid;
+      grid-template-columns: 64px 92px 1fr 220px;
+      gap: 14px;
+      padding: 14px;
       align-items:center;
-      gap:0.65rem;
-      min-width:0;
+      border-bottom: 1px solid var(--border);
+      background: #fff;
     }
+    .rank-row:last-child{ border-bottom: none; }
+
     .rank-badge{
-      background:var(--primary);
-      color:#fff;
-      width:34px;
-      height:34px;
-      border-radius:10px;
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
       display:flex;
       align-items:center;
       justify-content:center;
-      font-weight:900;
-      font-size:1rem;
-      flex:0 0 auto;
-    }
-    .category-pill{
-      background:var(--accent);
+      font-weight: 900;
       color:#fff;
-      padding:0.32rem 0.75rem;
-      border-radius:999px;
-      font-size:0.78rem;
-      font-weight:900;
-      letter-spacing:0.02em;
-      white-space:nowrap;
+      background: var(--blue);
+      box-shadow: 0 10px 18px rgba(31,111,235,.18);
+      margin-left: 6px;
     }
-    .choice-pill{
-      background:var(--secondary);
-      color:#fff;
-      padding:0.32rem 0.75rem;
-      border-radius:999px;
-      font-size:0.78rem;
-      font-weight:900;
-      letter-spacing:0.06em;
-      text-transform:uppercase;
-      white-space:nowrap;
+
+    .product-thumb{
+      width: 92px;
+      height: 92px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: #fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
     }
-    .score-badge{
-      background:#0f172a;
-      color:#fff;
-      padding:0.45rem 0.75rem;
-      border-radius:12px;
-      font-weight:900;
-      font-size:1.05rem;
-      text-align:right;
-      flex:0 0 auto;
-      line-height:1;
-    }
-    .score-badge .score-label{
+    .product-thumb img{
+      width: 86px;
+      height: 86px;
+      object-fit: contain;
       display:block;
-      font-size:0.64rem;
-      font-weight:800;
-      opacity:0.85;
-      margin-top:4px;
-      letter-spacing:0.06em;
-      text-transform:uppercase;
     }
 
-    /* Winner card subtle gold highlight */
-    .ranking-card.winner{
-      border-color:var(--gold-border);
-      box-shadow:0 6px 18px rgba(212,175,55,0.18);
-    }
-    .ranking-card.winner .card-top-bar{
-      background:linear-gradient(135deg,var(--gold-soft) 0%, #fff 75%);
-      border-bottom-color:rgba(212,175,55,0.25);
-    }
-    .ranking-card.winner .rank-badge{ background:var(--gold); color:#111827; }
-    .ranking-card.winner .score-badge{ background:var(--gold); color:#111827; }
+    .rank-main{ min-width: 0; }
 
-    /* Compact body: smaller image + clamped text so 3 cards fit on desktop */
-    .card-body{
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .03em;
+      text-transform: uppercase;
+      padding: 6px 10px;
+      border-radius: 999px;
+      margin-bottom: 6px;
+      width: fit-content;
+    }
+    .pill.editors{
+      background: #eaf7ef;
+      color: var(--green-dark);
+    }
+    .pill.highoutput{
+      background: #eef6ff;
+      color: var(--blue);
+    }
+    .pill.features{
+      background: #fff3e6;
+      color: #b45309;
+    }
+    .pill.budget{
+      background: #f1f5f9;
+      color: #475569;
+    }
+    .pill.alt{
+      background: #f8fafc;
+      color: #334155;
+    }
+
+    .rank-name{
+      font-size: 18px;
+      font-weight: 950;
+      letter-spacing: -0.01em;
+      margin-bottom: 6px;
+      line-height: 1.2;
+    }
+
+    /* green checks in circles */
+    .benefits{
+      list-style:none;
       display:grid;
-      grid-template-columns:110px 1fr;
-      gap:0.9rem;
-      padding:0.9rem 1rem;
-      align-items:flex-start;
+      gap: 6px;
+      margin-top: 4px;
     }
-    .product-image-container{
+    .benefits li{
+      display:flex;
+      align-items:flex-start;
+      gap: 10px;
+      color: var(--muted);
+      font-weight: 650;
+      font-size: 13px;
+    }
+    .check{
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      background: #eaf7ef;
+      border: 1px solid rgba(22,163,74,.25);
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      flex: 0 0 18px;
+      margin-top: 1px;
+    }
+    .check svg{ width: 12px; height: 12px; fill: var(--green); }
+
+    .rank-side{
+      justify-self:end;
+      text-align:right;
       display:flex;
       flex-direction:column;
-      align-items:center;
-      gap:0.45rem;
-    }
-    .product-image{
-      width:110px;
-      height:110px;
-      object-fit:contain;
-      border-radius:12px;
-      background:#fff;
-      padding:8px;
-      border:1px solid var(--border);
+      gap: 10px;
+      align-items:flex-end;
     }
 
-    .product-details h3{
-      font-size:1.07rem;
-      font-weight:900;
-      letter-spacing:-0.01em;
-      margin-bottom:0.15rem;
-      line-height:1.25;
-    }
-    .microline{
-      display:flex;
-      flex-wrap:wrap;
-      gap:0.5rem 0.75rem;
-      align-items:center;
-      margin-bottom:0.45rem;
-    }
-    .micro-tag{
-      font-size:0.78rem;
-      font-weight:800;
-      color:var(--text-light);
+    .score{
+      font-size: 22px;
+      font-weight: 950;
+      letter-spacing: -0.02em;
     }
 
-    /* Rating: “filled stars overlay” so we can do 4.5 / 3.8 */
-    .rating{
-      position:relative;
-      display:inline-block;
-      font-size:1rem;
-      letter-spacing:1px;
-      line-height:1;
+    /* CSS star rating with halves/decimals */
+    .stars{
+      --rating: 5;
+      --star-size: 16px;
+      --star-color: #e5e7eb;
+      --star-fill: #fbbf24;
+
+      position: relative;
+      display: inline-block;
+      font-size: var(--star-size);
+      line-height: 1;
+      letter-spacing: 2px;
     }
-    .rating .stars-bg{
-      color:#d1d5db;
+    .stars::before{
+      content: "★★★★★";
+      color: var(--star-color);
     }
-    .rating .stars-fill{
+    .stars::after{
+      content: "★★★★★";
       position:absolute;
-      left:0;
-      top:0;
-      width:0%;
+      left:0; top:0;
+      width: calc((var(--rating) / 5) * 100%);
       overflow:hidden;
+      color: var(--star-fill);
       white-space:nowrap;
-      color:var(--star);
-    }
-    .rating small{
-      margin-left:0.5rem;
-      font-size:0.78rem;
-      color:var(--text-light);
-      font-weight:800;
-      letter-spacing:0;
     }
 
-    .product-description{
-      color:var(--text-light);
-      font-size:0.9rem;
-      line-height:1.55;
-      margin-bottom:0.55rem;
-
-      /* clamp so cards stay compact */
-      display:-webkit-box;
-      -webkit-line-clamp:2;
-      -webkit-box-orient:vertical;
-      overflow:hidden;
-    }
-
-    /* quick bullets only (3 max) */
-    .quick-bullets{
-      list-style:none;
-      display:grid;
-      gap:0.28rem;
-      margin-bottom:0.5rem;
-    }
-    .quick-bullets li{
-      position:relative;
-      padding-left:1.2rem;
-      font-size:0.86rem;
-      color:var(--text);
-      line-height:1.35;
-      font-weight:600;
-      display:-webkit-box;
-      -webkit-line-clamp:1;
-      -webkit-box-orient:vertical;
-      overflow:hidden;
-    }
-    .quick-bullets li::before{
-      content:"✓";
-      position:absolute;
-      left:0;
-      color:var(--secondary);
-      font-weight:900;
-    }
-
-    /* details (expandable) to keep card short but still full info accessible */
-    details.product-more{
-      background:var(--bg-alt);
-      border:1px solid var(--border);
-      border-radius:12px;
-      padding:0.65rem 0.75rem;
-      margin-top:0.55rem;
-    }
-    details.product-more summary{
-      cursor:pointer;
-      list-style:none;
-      font-weight:900;
-      font-size:0.86rem;
-      color:var(--primary);
+    .btns{
       display:flex;
-      align-items:center;
-      gap:0.5rem;
-      user-select:none;
+      gap: 10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
     }
-    details.product-more summary::-webkit-details-marker{ display:none; }
-    details.product-more summary::before{
-      content:"+";
-      width:22px;
-      height:22px;
-      border-radius:8px;
-      background:rgba(11,99,206,0.12);
-      display:flex;
+    .btn{
+      display:inline-flex;
       align-items:center;
       justify-content:center;
-      font-weight:900;
-      color:var(--primary);
-    }
-    details.product-more[open] summary::before{ content:"−"; }
-
-    .more-content{
-      margin-top:0.65rem;
-      color:var(--text-light);
-      font-size:0.9rem;
-      line-height:1.6;
-    }
-
-    .specs-grid{
-      display:grid;
-      grid-template-columns:repeat(3,minmax(0,1fr));
-      gap:0.55rem;
-      margin-top:0.6rem;
-    }
-    .spec-item{
-      background:#fff;
-      border:1px solid var(--border);
-      padding:0.6rem;
-      border-radius:12px;
-      font-size:0.82rem;
-    }
-    .spec-label{
-      display:block;
-      color:var(--text-light);
-      font-weight:900;
-      font-size:0.66rem;
-      text-transform:uppercase;
-      letter-spacing:0.06em;
-      margin-bottom:0.2rem;
-    }
-    .spec-value{
-      color:var(--text);
-      font-weight:900;
-      font-size:0.92rem;
-    }
-
-    .card-footer{
-      background:var(--bg-alt);
-      padding:0.85rem 1rem;
-      border-top:1px solid var(--border);
-      display:flex;
-      justify-content:flex-end;
-      align-items:center;
-      gap:0.75rem;
-      flex-wrap:wrap;
-    }
-
-    .btn{
-      display:inline-block;
-      padding:0.7rem 1.05rem;
-      border-radius:12px;
-      font-weight:900;
+      gap: 8px;
+      padding: 10px 14px;
+      border-radius: 14px;
+      border: 1px solid transparent;
+      font-weight: 900;
+      font-size: 13px;
       text-decoration:none;
-      font-size:0.92rem;
-      letter-spacing:0.01em;
-      transition:all 0.2s;
+      cursor:pointer;
+      transition: all .15s ease;
       white-space:nowrap;
+      min-width: 140px;
     }
     .btn-primary{
-      background:var(--primary);
-      color:#fff;
-      box-shadow:0 2px 10px rgba(11,99,206,0.22);
+      background: var(--blue);
+      color: #fff;
+      box-shadow: 0 10px 18px rgba(31,111,235,.18);
     }
-    .btn-primary:hover{ background:var(--primary-dark); transform:translateY(-1px); }
-    .btn-secondary{
+    .btn-primary:hover{ background: var(--blue-dark); transform: translateY(-1px); }
+    .btn-outline{
       background:#fff;
-      color:var(--primary);
-      border:1.5px solid rgba(11,99,206,0.35);
+      color: var(--blue);
+      border-color: rgba(31,111,235,.45);
     }
-    .btn-secondary:hover{ border-color:var(--primary); }
+    .btn-outline:hover{ background: #f8fbff; border-color: rgba(31,111,235,.75); }
 
-    /* =========================================================
-       QUICK COMPARISON
-    ========================================================= */
+    /* collapsible "View details" */
+    .details{
+      grid-column: 1 / -1;
+      margin-top: 10px;
+      border-top: 1px dashed var(--border);
+      padding-top: 10px;
+      display:none;
+    }
+    .details p{
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    .specs{
+      display:grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 8px;
+    }
+    .spec{
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 10px;
+      background: #fff;
+    }
+    .spec .k{
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 4px;
+    }
+    .spec .v{
+      font-weight: 900;
+      font-size: 13px;
+      color: var(--text);
+    }
+
+    .rank-row.expanded .details{ display:block; }
+
+    /* ==========================================================================
+       QUICK COMPARISON (Hydrotech highlighted in gold)
+       ========================================================================== */
     .comparison-section{
-      background:var(--bg-alt);
-      padding:2.1rem 0;
-      margin-bottom:2rem;
+      background: var(--bg-alt);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 22px 0;
+      margin: 22px 0;
     }
     .comparison-section h2{
       text-align:center;
-      font-size:1.7rem;
-      font-weight:900;
-      letter-spacing:-0.02em;
-      margin-bottom:1.4rem;
+      font-size: 20px;
+      font-weight: 950;
+      letter-spacing: -0.01em;
+      margin-bottom: 14px;
     }
-    .comparison-table{
+
+    .table-wrap{
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
       background:#fff;
-      border:1px solid var(--border);
-      border-radius:14px;
-      overflow-x:auto;
+      overflow:auto;
+      box-shadow: 0 10px 22px rgba(2,6,23,.05);
     }
-    .comparison-table table{ width:100%; border-collapse:collapse; min-width:820px; }
-    .comparison-table th{
-      background:#f1f5f9;
-      padding:0.95rem;
+    table{
+      width:100%;
+      border-collapse: collapse;
+      min-width: 820px;
+    }
+    thead th{
+      background: #fbfcff;
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-weight: 950;
+      padding: 12px 14px;
       text-align:left;
-      font-weight:900;
-      font-size:0.76rem;
-      text-transform:uppercase;
-      letter-spacing:0.08em;
-      color:var(--text-light);
-      border-bottom:1px solid var(--border);
-      white-space:nowrap;
+      border-bottom: 1px solid var(--border);
     }
-    .comparison-table td{
-      padding:0.95rem;
-      border-bottom:1px solid var(--border);
-      font-size:0.9rem;
-      vertical-align:top;
+    tbody td{
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border);
+      font-weight: 750;
+      font-size: 14px;
+      color: var(--text);
+      vertical-align: middle;
     }
-    .comparison-table tr:last-child td{ border-bottom:none; }
-    .product-name{ font-weight:900; }
-
-    /* Winner row gold outline */
-    .comparison-table tr.winner-row td{
-      background:linear-gradient(0deg,var(--gold-soft), #fff);
-      border-bottom-color:rgba(212,175,55,0.25);
-    }
-    .comparison-table tr.winner-row td:first-child{
-      box-shadow:inset 4px 0 0 var(--gold);
-    }
-
-    /* =========================================================
-       FAQ
-    ========================================================= */
-    .faq-section{ background:#fff; padding:2.2rem 0; margin-bottom:2rem; }
-    .faq-section h2{
-      text-align:center;
-      font-size:1.7rem;
-      margin-bottom:1.4rem;
-      font-weight:900;
-      letter-spacing:-0.02em;
-    }
-    .faq-list{ max-width:860px; margin:0 auto; }
-    details.faq{
-      background:var(--bg-alt);
-      border:1px solid var(--border);
-      border-radius:14px;
-      padding:1.05rem;
-      margin-bottom:0.85rem;
-      transition:all 0.2s;
-    }
-    details.faq[open]{ background:#fff; box-shadow:0 2px 10px rgba(0,0,0,0.04); }
-    details.faq summary{
-      font-weight:900;
-      cursor:pointer;
-      list-style:none;
+    tbody tr:last-child td{ border-bottom: none; }
+    .product-cell{
       display:flex;
       align-items:center;
-      gap:0.7rem;
-      font-size:1rem;
+      gap: 10px;
+      font-weight: 950;
+    }
+    .tiny{
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .tiny img{
+      width: 30px; height: 30px; object-fit: contain;
+    }
+
+    /* Winner highlight ONLY in comparison (per request) */
+    tbody tr.winner{
+      outline: 3px solid var(--gold);
+      outline-offset: -3px;
+      background: var(--gold-soft);
+    }
+
+    /* ==========================================================================
+       FAQ + FOOTER
+       ========================================================================== */
+    .faq-section{
+      padding: 18px 0 10px;
+    }
+    .faq-section h2{
+      text-align:center;
+      font-size: 20px;
+      font-weight: 950;
+      margin-bottom: 14px;
+    }
+    .faq-list{
+      max-width: 860px;
+      margin: 0 auto;
+      display:grid;
+      gap: 10px;
+    }
+    details.faq{
+      background:#fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px;
+      box-shadow: 0 6px 16px rgba(2,6,23,.04);
+    }
+    details.faq summary{
+      cursor:pointer;
+      list-style:none;
+      font-weight: 950;
+      display:flex;
+      align-items:center;
+      gap: 10px;
     }
     details.faq summary::-webkit-details-marker{ display:none; }
     details.faq summary::before{
       content:"+";
-      width:26px;
-      height:26px;
-      border-radius:10px;
-      background:rgba(11,99,206,0.12);
-      display:flex;
+      width: 22px; height: 22px;
+      display:inline-flex;
       align-items:center;
       justify-content:center;
-      color:var(--primary);
-      font-weight:900;
+      border-radius:999px;
+      background: var(--blue);
+      color:#fff;
+      font-weight: 950;
+      flex: 0 0 22px;
     }
     details.faq[open] summary::before{ content:"−"; }
     .faq-answer{
-      margin-top:0.85rem;
-      color:var(--text-light);
-      padding-left:2.0rem;
-      font-size:0.94rem;
-      line-height:1.75;
+      margin-top: 10px;
+      color: var(--muted);
+      font-weight: 650;
+      font-size: 14px;
+      padding-left: 32px;
     }
 
-    /* =========================================================
-       FOOTER
-    ========================================================= */
     .site-footer{
-      background:#111827;
+      margin-top: 26px;
+      background: #0b1220;
       color:#fff;
-      padding:2.25rem 0 1.8rem;
+      padding: 20px 0;
     }
-    .footer-content{ text-align:center; }
-    .footer-links{
-      display:flex;
-      justify-content:center;
-      gap:1.6rem;
-      margin-bottom:1.05rem;
-      flex-wrap:wrap;
-    }
-    .footer-links a{
-      color:#fff;
-      opacity:0.85;
-      text-decoration:none;
-      font-size:0.9rem;
-      font-weight:800;
-    }
-    .footer-links a:hover{ opacity:1; text-decoration:underline; }
-    .copyright{ color:rgba(255,255,255,0.65); font-size:0.82rem; }
-
-    /* =========================================================
-       STICKY CTA
-    ========================================================= */
-    .sticky-cta{
-      position:fixed;
-      bottom:0; left:0; right:0;
-      background:#fff;
-      border-top:1px solid var(--border);
-      padding:0.9rem 0;
-      box-shadow:0 -6px 16px rgba(0,0,0,0.08);
-      z-index:50;
-    }
-    .sticky-cta-content{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:1.25rem;
-      flex-wrap:wrap;
-    }
-    .sticky-cta-text strong{
-      display:block;
-      font-size:1rem;
-      font-weight:900;
-      margin-bottom:0.15rem;
-    }
-    .sticky-cta-text p{
-      font-size:0.84rem;
-      color:var(--text-light);
-      margin:0;
-      font-weight:600;
+    .footer-content{
+      text-align:center;
+      color: rgba(255,255,255,.78);
+      font-size: 13px;
+      font-weight: 650;
     }
 
-    /* =========================================================
+    /* ==========================================================================
        RESPONSIVE
-    ========================================================= */
-    @media (max-width: 920px){
-      .hero-grid{ grid-template-columns:1fr; }
-      .hero-image{ max-width:520px; }
+       ========================================================================== */
+    @media (max-width: 980px){
+      .hero-grid{ grid-template-columns: 1fr; }
+      .hero-media img{ max-width: 360px; }
+      .rank-row{
+        grid-template-columns: 60px 84px 1fr;
+      }
+      .rank-side{
+        grid-column: 1 / -1;
+        flex-direction:row;
+        justify-content:space-between;
+        width:100%;
+        align-items:center;
+        text-align:left;
+        margin-top: 8px;
+      }
+      .btns{ justify-content:flex-start; }
+      .specs{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
-    @media (max-width: 768px){
-      .hero h1{ font-size:1.75rem; }
-      .card-body{ grid-template-columns:1fr; }
-      .product-image{ width:140px; height:140px; }
-      .specs-grid{ grid-template-columns:1fr; }
-      .card-footer{ justify-content:stretch; }
-      .btn{ width:100%; text-align:center; }
-      .sticky-cta-content{ flex-direction:column; text-align:center; }
-      .quick-nav-list{ flex-direction:column; }
-      .quick-nav-list a{ text-align:center; }
+    @media (max-width: 540px){
+      .hero h1{ font-size: 24px; }
+      .rank-name{ font-size: 16px; }
+      .btn{ min-width: 0; width: 100%; }
+      .btns{ width: 100%; }
+      .rank-row{ grid-template-columns: 56px 78px 1fr; padding: 12px; }
+      .product-thumb{ width: 78px; height: 78px; }
+      .product-thumb img{ width: 72px; height: 72px; }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- =========================================================
+  <!-- =========================================================================
        HEADER SECTION
-       - Replace the current logo with your uploaded logo.
-       - IMPORTANT: Upload your logo file into the repo root
-         and name it exactly:  logo.png
-         (or change the src below to match your filename)
-  ========================================================== -->
+       - Uses uploaded logo.png (place your attached logo in repo root as logo.png)
+       ========================================================================= -->
   <header class="site-header">
     <div class="container">
       <div class="header-content">
-        <a href="./" class="brand" aria-label="Wellness Biohackers Home">
-          <img class="brand-logo" src="logo.png" alt="Wellness Biohackers" />
+        <a class="brand" href="./" aria-label="Wellness Biohackers Home">
+          <img src="logo.png" alt="WellnessBiohackers - Optimize Your Health" />
         </a>
+
         <button class="disclosure-btn" onclick="openModal()">Advertiser Disclosure</button>
       </div>
     </div>
   </header>
 
-  <!-- =========================================================
-       DISCLOSURE MODAL SECTION
-  ========================================================== -->
-  <dialog id="disclosureModal">
+  <!-- Disclosure Modal -->
+  <dialog id="disclosureModal" aria-labelledby="discTitle">
     <div class="modal-content">
       <div class="modal-header">
-        <h2>Advertiser Disclosure</h2>
+        <h2 id="discTitle">Advertiser Disclosure</h2>
         <button class="modal-close" onclick="closeModal()" aria-label="Close">&times;</button>
       </div>
       <div class="modal-body">
-        <p>WellnessBiohackers is an independent review site. We research products and compile information from public documentation, brand specifications, and available testing data.</p>
-        <p>Some links on this page may be affiliate links. This does not change your price.</p>
-        <p>Rankings are determined by our stated criteria (verification, build quality, warranty/support, and value), with a bias toward transparent testing and NZ buyer experience.</p>
+        <p>WellnessBiohackers is an independent review site. We research products and summarize key specs, policies, and user feedback to help readers compare options.</p>
+        <p>Some links may be affiliate links. This does not increase your cost. Rankings are determined by our editorial methodology and available verification data (e.g., testing claims, warranties, policies, and user feedback).</p>
+        <p>Always verify claims and specifications on the seller’s website before purchasing.</p>
       </div>
     </div>
   </dialog>
 
-  <!-- =========================================================
-       HERO SECTION (header image already included earlier)
-       - Your hero image file in repo root should be: hero-scientists.png
-  ========================================================== -->
+  <!-- =========================================================================
+       HERO SECTION (includes hero-scientists.png)
+       ========================================================================= -->
   <section class="hero">
     <div class="container">
       <div class="hero-grid">
-        <div class="hero-content">
+        <div>
           <div class="update-badge">Updated <span id="currentDate"></span></div>
-          <h1>Top Hydrogen Water Bottles (2026)</h1>
-          <p class="hero-intro">
-            A quick-scan ranking for NZ buyers — prioritising verified hydrogen output, build quality, and real-world value.
-            Hydrotech is our clear #1 based on verification + support + price-to-performance.
+          <h1>Best Hydrogen Water Bottles NZ (2026)</h1>
+          <p>
+            We compared top hydrogen bottles for verified performance, build quality, warranty policies, and overall value for New Zealand buyers.
+            Below is a quick scan ranking, followed by a simple comparison table and FAQs.
           </p>
         </div>
 
-        <div class="hero-image-wrap">
-          <img
-            src="hero-scientists.png"
-            alt="Scientists holding hydrogen water bottles"
-            class="hero-image"
-            loading="eager"
-          />
+        <div class="hero-media">
+          <img src="hero-scientists.png" alt="Scientists holding hydrogen water bottles" loading="lazy" />
         </div>
       </div>
     </div>
   </section>
 
-  <!-- =========================================================
+  <!-- =========================================================================
        QUICK NAV SECTION
-  ========================================================== -->
+       ========================================================================= -->
   <div class="container">
     <div class="quick-nav">
-      <h3>Quick scan — then details</h3>
+      <div class="quick-nav-top">
+        <h3>Quick Navigation</h3>
+        <div class="hint">Quick scan — then details below</div>
+      </div>
       <ul class="quick-nav-list">
-        <li><a href="#product-1">#1 Hydrotech NZ</a></li>
-        <li><a href="#product-2">#2 Echo Flask</a></li>
-        <li><a href="#product-3">#3 IONZA</a></li>
-        <li><a href="#product-4">#4 Grounded Kiwi</a></li>
-        <li><a href="#product-5">#5 Evolved H2O</a></li>
-        <li><a href="#comparison">Comparison</a></li>
+        <li><a href="#rankings">Top 5 Rankings</a></li>
+        <li><a href="#comparison">Quick Comparison</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
     </div>
   </div>
 
-  <!-- =========================================================
-       RANKING SECTION (COMPACT)
-       Updates applied:
-       - No overlap: removed right-side ribbon that covered score
-       - Compact cards: shorter content + clamped text so ~3 cards visible on desktop
-       - Ratings updated (Hydrotech 5.0, Echo 4.5, IONZA 3.8)
-       - IONZA output updated to max 2.5ppm
-       - Grounded Kiwi price updated to $339 NZD
-       - Hydrotech clearly positioned as #1 (winner styling + copy)
-       - Removed inline “commission” messaging from cards
-  ========================================================== -->
-  <main>
-    <section class="rankings-section">
-      <div class="container">
-        <div class="ranking-header-row">
-          <h2>Top 5 Hydrogen Water Bottles (2026)</h2>
-          <div class="subtle">Quick scan — then expand each card for details</div>
-        </div>
+  <!-- =========================================================================
+       RANKING SECTION (compact cards)
+       - Fix: no banner covering score (no right-side ribbon)
+       - Fix: compact layout so ~3 items fit on desktop without full-screen scrolling
+       - Fix: stars per request (Hydrotech 5.0, Echo 4.5, Ionza 3.8)
+       - Fix: Ionza output max 2.5ppm, Grounded Kiwi price $339
+       - Fix: remove commission messaging
+       - Rule: Do NOT mention Hydrotech on any other brand card
+       ========================================================================= -->
+  <main class="container">
+    <div class="section-title" id="rankings">Top 5 Hydrogen Water Bottles (2026)</div>
 
-        <div id="rankings"></div>
+    <section class="rankings-wrap" aria-label="Rankings list">
+      <div class="rankings-head">
+        <div class="left">Ranked Results</div>
+        <div class="right">Quick scan — tap “View details” for specs</div>
       </div>
-    </section>
 
-    <!-- =========================================================
-         QUICK COMPARISON SECTION
-         Updates applied:
-         - Hydrotech row highlighted in gold winner style
-         - IONZA output corrected to 2.5ppm
-         - Grounded Kiwi price corrected to $339 NZD
-         - Keep one NZD conversion under Price (Echo includes ~NZD)
-    ========================================================== -->
-    <section class="comparison-section" id="comparison">
-      <div class="container">
-        <h2>Quick Comparison</h2>
-        <div class="comparison-table">
-          <table>
-            <thead>
-              <tr>
-                <th>Product</th>
-                <th>Score</th>
-                <th>H₂ Output</th>
-                <th>Capacity</th>
-                <th>Warranty</th>
-                <th>Price</th>
-              </tr>
-            </thead>
-            <tbody id="comparisonTableBody"></tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <!-- =========================================================
-         FAQ SECTION
-    ========================================================== -->
-    <section class="faq-section" id="faq">
-      <div class="container">
-        <h2>FAQ</h2>
-        <div class="faq-list">
-          <details class="faq">
-            <summary>What is hydrogen water?</summary>
-            <div class="faq-answer">
-              <p>Hydrogen water is water infused with molecular hydrogen gas (H₂). H₂ is colourless and tasteless and can dissolve into water. Research is ongoing; results may vary.</p>
-            </div>
-          </details>
-
-          <details class="faq">
-            <summary>How do hydrogen water bottles work?</summary>
-            <div class="faq-answer">
-              <p>Most use electrolysis (often SPE/PEM) to generate hydrogen that dissolves into the water. Cycle times vary by device.</p>
-            </div>
-          </details>
-
-          <details class="faq">
-            <summary>What matters most when comparing bottles?</summary>
-            <div class="faq-answer">
-              <p>Verified output (not just self-claims), build materials, warranty/support, and value for money — especially for NZ buyers (shipping + after-sales support).</p>
-            </div>
-          </details>
-        </div>
-      </div>
+      <div id="rankingsList"></div>
     </section>
   </main>
 
-  <!-- =========================================================
+  <!-- =========================================================================
+       QUICK COMPARISON SECTION
+       - Winner (Hydrotech) highlighted in gold here ONLY
+       - Prices are NZD only (no USD shown)
+       - Echo + Evolved show NZD conversions
+       - Grounded Kiwi price $339, Ionza max 2.5ppm
+       ========================================================================= -->
+  <section class="comparison-section" id="comparison">
+    <div class="container">
+      <h2>Quick Comparison</h2>
+      <div class="table-wrap" aria-label="Comparison table">
+        <table>
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Score</th>
+              <th>H₂ Output</th>
+              <th>Capacity</th>
+              <th>Warranty</th>
+              <th>Price (NZD)</th>
+            </tr>
+          </thead>
+          <tbody id="comparisonTableBody"></tbody>
+        </table>
+      </div>
+      <div style="text-align:center; margin-top:10px; color: var(--muted); font-size: 12px; font-weight:700;">
+        Currency conversions use a USD→NZD rate of <span id="fxRateText"></span>.
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       FAQ SECTION
+       ========================================================================= -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-list">
+        <details class="faq">
+          <summary>What is hydrogen water?</summary>
+          <div class="faq-answer">
+            Hydrogen water is regular water infused with molecular hydrogen (H₂). Hydrogen is a tasteless, odorless gas that can dissolve into water. Research is ongoing and results vary by person.
+          </div>
+        </details>
+
+        <details class="faq">
+          <summary>How do hydrogen water bottles work?</summary>
+          <div class="faq-answer">
+            Most bottles use electrolysis (often SPE/PEM) to generate hydrogen. A current passes through water at the electrode assembly, producing hydrogen that dissolves into the water during a cycle.
+          </div>
+        </details>
+
+        <details class="faq">
+          <summary>What matters most when comparing bottles?</summary>
+          <div class="faq-answer">
+            Look for verified hydrogen output (ppm/ppb), materials (glass vs plastic), warranty and money-back policies, replacement parts/accessories, ease of cleaning, and clear documentation of claims.
+          </div>
+        </details>
+
+        <details class="faq">
+          <summary>Are ppm/ppb claims always reliable?</summary>
+          <div class="faq-answer">
+            Not always. Some brands publish self-reported numbers without independent verification. Treat very high claims skeptically unless accompanied by credible testing documentation.
+          </div>
+        </details>
+
+        <details class="faq">
+          <summary>How are these rankings determined?</summary>
+          <div class="faq-answer">
+            Our scoring weighs verified output claims, construction quality, warranty policies, value-for-money for NZ buyers, accessories/support, and user feedback signals.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
        FOOTER SECTION
-  ========================================================== -->
+       ========================================================================= -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-content">
-        <nav class="footer-links">
-          <a href="#privacy">Privacy Policy</a>
-          <a href="#terms">Terms of Service</a>
-          <a href="#methodology">Methodology</a>
-          <a href="#contact">Contact</a>
-        </nav>
-        <p class="copyright">© <span id="currentYear"></span> WellnessBiohackers. All rights reserved.</p>
+        © <span id="currentYear"></span> WellnessBiohackers. All rights reserved.
       </div>
     </div>
   </footer>
 
-  <!-- =========================================================
-       STICKY CTA SECTION (kept clean — no commission messaging)
-  ========================================================== -->
-  <div class="sticky-cta">
-    <div class="container">
-      <div class="sticky-cta-content">
-        <div class="sticky-cta-text">
-          <strong>Best overall pick for NZ buyers</strong>
-          <p>Verified performance + value + local support — Hydrotech is our #1.</p>
-        </div>
-        <a href="https://hydrotechnz.com/products/hydrotech-water-bottle" class="btn btn-primary" target="_blank" rel="nofollow sponsored noopener">
-          Visit #1 Pick →
-        </a>
-      </div>
-    </div>
-  </div>
-
   <script>
-    /* =========================================================
-       UTILITIES SECTION
-    ========================================================== */
-    const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
-    document.getElementById('currentDate').textContent = new Date().toLocaleDateString('en-US', dateOptions);
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    /* ==========================================================================
+       DATE + MODAL
+       ========================================================================== */
+    const dateOptions = { year: "numeric", month: "long", day: "numeric" };
+    document.getElementById("currentDate").textContent = new Date().toLocaleDateString("en-NZ", dateOptions);
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
 
-    function openModal(){ document.getElementById('disclosureModal').showModal(); }
-    function closeModal(){ document.getElementById('disclosureModal').close(); }
-    document.getElementById('disclosureModal').addEventListener('click', (e) => {
+    function openModal(){ document.getElementById("disclosureModal").showModal(); }
+    function closeModal(){ document.getElementById("disclosureModal").close(); }
+
+    document.getElementById("disclosureModal").addEventListener("click", (e) => {
       if (e.target === e.currentTarget) closeModal();
     });
 
-    function clampPercent(n){ return Math.max(0, Math.min(100, n)); }
-    function ratingPercent(ratingOutOf5){
-      return clampPercent((ratingOutOf5 / 5) * 100);
-    }
+    /* ==========================================================================
+       FX RATE (USD → NZD)
+       Source: exchangerates.org.uk shows 1 USD = 1.7324 NZD on 12 Jan 2026 (updated 13/01/26)
+       ========================================================================== */
+    const USD_TO_NZD = 1.7324;
+    document.getElementById("fxRateText").textContent = USD_TO_NZD.toFixed(4);
 
-    /* =========================================================
-       DATA SECTION (Updated per your instructions)
-       - Hydrotech: 5 stars
-       - Echo: 4.5 stars
-       - IONZA: 3.8 stars + max 2.5ppm
-       - Grounded Kiwi: $339 NZD
-       - Hydrotech positioned as clear winner
-    ========================================================== */
+    const usdToNzd = (usd) => Math.round(usd * USD_TO_NZD);
+
+    /* ==========================================================================
+       PRODUCT DATA (images are local files in repo root)
+       Filenames you uploaded:
+         hydrotech.png, echo.png, ionza.png, groundedkiwi.png, evolved.png
+       ========================================================================== */
     const products = [
       {
         rank: 1,
-        winner: true,
         name: "Hydrotech NZ Hydrogen Water Bottle",
-        category: "Best Overall (NZ)",
-        badge: "EDITOR'S CHOICE",
+        pill: { text: "EDITOR'S CHOICE", type: "editors" },
         score: 9.8,
         rating: 5.0,
-        price: "$179 NZD",
+        priceNzd: 179,
         h2Output: "Up to 3.8ppm (3,800ppb)",
         capacity: "470ml",
         warranty: "12 months",
         image: "hydrotech.png",
         url: "https://hydrotechnz.com/products/hydrotech-water-bottle",
-        description:
-          "The clear #1 for NZ buyers: strong verified performance, premium build, and the best price-to-trust ratio. Hydrotech wins on real-world value, local support, and a polished ecosystem of accessories/protection.",
         bullets: [
           "Best overall value + trust signals for NZ buyers",
-          "Premium build + accessories/protection options",
-          "Strong support + warranty coverage"
+          "Verified performance + premium materials",
+          "Strong warranty + money-back policy"
         ],
-        more: {
-          highlights: [
-            "Verified high output for its price category (strong value-to-performance)",
-            "470ml capacity (largest in this list)",
-            "Premium build quality and accessories/protection ecosystem",
-            "NZ buyer experience: support, dispatch, and after-sales coverage"
-          ],
+        details: {
+          description:
+            "Top overall pick for NZ buyers combining verified output claims, premium build quality, strong protections, and excellent value-for-money.",
           specs: [
-            { label: "Capacity", value: "470ml" },
-            { label: "H₂ Output", value: "Up to 3.8ppm" },
-            { label: "Warranty", value: "12 months" },
-            { label: "Charging", value: "USB-C" },
-            { label: "Best for", value: "NZ buyers" },
-            { label: "Overall", value: "#1 Winner" }
+            { k: "Capacity", v: "470ml" },
+            { k: "H₂ Output", v: "Up to 3.8ppm" },
+            { k: "Warranty", v: "12 months" },
+            { k: "Guarantee", v: "30-day money-back" },
+            { k: "Material", v: "Double-wall glass" },
+            { k: "Charging", v: "USB-C" }
           ]
         }
       },
       {
         rank: 2,
-        winner: false,
         name: "Echo Flask Hydrogen Water Bottle",
-        category: "Premium Option",
-        score: 9.2,
+        pill: { text: "HIGH OUTPUT", type: "highoutput" },
+        score: 9.3,
         rating: 4.5,
-        price: "$299 USD",
-        priceNzdNote: "(~$490 NZD)",
-        h2Output: "Up to 8.0ppm",
-        capacity: "355ml (12oz)",
-        warranty: "5 years",
+        priceNzd: usdToNzd(299), // converted, NZD only
+        h2Output: "Up to 8ppm (stated)",
+        capacity: "355ml",
+        warranty: "5 years (stated)",
         image: "echo.png",
-        url: "https://echowater.com/products/echo-flask",
-        description:
-          "High-end feature set with premium pricing. Great option if budget isn’t a constraint — but less value for most NZ buyers versus Hydrotech.",
+        url: "https://echowater.com/products/echo-flask?view=echo-flask-new-faq-test",
         bullets: [
-          "Premium feature set",
-          "High output claims",
-          "Long warranty (stated)"
+          "Premium feature set + app controls",
+          "High output claim with longer cycles",
+          "Long warranty (stated by brand)"
         ],
-        more: {
-          highlights: [
-            "Advanced display + premium experience",
-            "Strong warranty positioning",
-            "More expensive once converted/shipped to NZ"
-          ],
+        details: {
+          description:
+            "A premium option with strong feature set and high stated output, but comes at a significantly higher NZD cost after currency conversion and shipping.",
           specs: [
-            { label: "Capacity", value: "355ml" },
-            { label: "H₂ Output", value: "Up to 8.0ppm" },
-            { label: "Warranty", value: "5 years" },
-            { label: "Best for", value: "Premium buyers" },
-            { label: "Price", value: "$299 USD (~$490 NZD)" },
-            { label: "Value vs #1", value: "Lower in NZ" }
+            { k: "Capacity", v: "355ml" },
+            { k: "H₂ Output", v: "Up to 8ppm (stated)" },
+            { k: "Warranty", v: "5 years (stated)" },
+            { k: "Material", v: "BPA-free body" },
+            { k: "Charging", v: "USB-C" },
+            { k: "Controls", v: "Display + app (stated)" }
           ]
         }
       },
       {
         rank: 3,
-        winner: false,
-        name: "IONZA Hydrogen Water Bottle",
-        category: "Feature Kit",
-        score: 7.8,
+        name: "IONZA Hydrogen Essential Kit",
+        pill: { text: "FEATURES", type: "features" },
+        score: 8.6,
         rating: 3.8,
-        price: "$390 NZD",
-        h2Output: "Up to 2.5ppm",
+        priceNzd: 390,
+        h2Output: "Up to 2.5ppm (stated)",
         capacity: "300ml",
-        warranty: "Standard",
+        warranty: "Standard (stated)",
         image: "ionza.png",
         url: "https://ionza.co.nz/collections/portable/products/hydrogen-water-bottle",
-        description:
-          "An alternative option with a kit-style positioning. Output is capped at 2.5ppm, making it less competitive on performance per dollar versus the top picks.",
         bullets: [
-          "Kit-style positioning",
-          "Smaller capacity",
-          "Higher price for output level"
+          "Dual-use kit (bottle + accessories)",
+          "Glass construction (stated)",
+          "Premium price tier in NZ"
         ],
-        more: {
-          highlights: [
-            "Max output: 2.5ppm (per your update)",
-            "Smaller bottle size compared to Hydrotech",
-            "Price puts it in a tougher value bracket"
-          ],
+        details: {
+          description:
+            "A feature-focused kit with accessories and stated glass build. Output is listed up to 2.5ppm and the price is higher relative to many alternatives.",
           specs: [
-            { label: "Capacity", value: "300ml" },
-            { label: "H₂ Output", value: "Up to 2.5ppm" },
-            { label: "Warranty", value: "Standard" },
-            { label: "Best for", value: "Feature kit buyers" },
-            { label: "Value vs #1", value: "Lower" },
-            { label: "Notes", value: "Output capped" }
+            { k: "Capacity", v: "300ml" },
+            { k: "H₂ Output", v: "Up to 2.5ppm (stated)" },
+            { k: "Warranty", v: "Standard (stated)" },
+            { k: "Material", v: "Glass (stated)" },
+            { k: "Electrodes", v: "Platinum-coated (stated)" },
+            { k: "Extras", v: "Accessory kit (stated)" }
           ]
         }
       },
       {
         rank: 4,
-        winner: false,
         name: "Grounded Kiwi Hydrogen Bottle",
-        category: "NZ Alternative",
+        pill: { text: "BUDGET", type: "budget" },
         score: 7.4,
-        rating: 3.4,
-        price: "$339 NZD",
-        h2Output: "Claims vary",
-        capacity: "Varies",
-        warranty: "Limited",
+        rating: 3.6,
+        priceNzd: 339,
+        h2Output: "Claims 9,000ppb",
+        capacity: "Varies (stated)",
+        warranty: "Limited (stated)",
         image: "groundedkiwi.png",
-        url: "https://www.groundedkiwi.nz/",
-        description:
-          "NZ alternative but priced closer to premium territory. Without strong verification signals, it’s harder to justify versus the #1 winner.",
+        url: "https://www.groundedkiwi.nz/products/9000ppb-hydrogen-water-generator-bottle-usb-powered-spe-pem-technology?variant=44733066674370",
         bullets: [
-          "NZ alternative brand",
-          "Higher price point ($339)",
-          "Value depends on verification"
+          "Lower upfront cost vs premium models",
+          "Portable design for everyday use",
+          "Output claims may require verification"
         ],
-        more: {
-          highlights: [
-            "Price updated to $339 NZD (per your update)",
-            "Consider verification + support when comparing"
-          ],
+        details: {
+          description:
+            "Lower-cost option with strong stated output claims. Consider verifying documentation around performance, warranty coverage, and support policies before purchase.",
           specs: [
-            { label: "Price", value: "$339 NZD" },
-            { label: "H₂ Output", value: "Claims vary" },
-            { label: "Warranty", value: "Limited" },
-            { label: "Best for", value: "Brand preference" },
-            { label: "Value vs #1", value: "Lower" },
-            { label: "Notes", value: "Compare proof" }
+            { k: "Capacity", v: "Varies (stated)" },
+            { k: "H₂ Output", v: "Claims 9,000ppb" },
+            { k: "Warranty", v: "Limited (stated)" },
+            { k: "Material", v: "Varies (stated)" },
+            { k: "Charging", v: "USB (stated)" },
+            { k: "Notes", v: "Check verification" }
           ]
         }
       },
       {
         rank: 5,
-        winner: false,
         name: "Evolved H2O Bottle",
-        category: "International Alt",
+        pill: { text: "ALTERNATIVE", type: "alt" },
         score: 7.0,
-        rating: 3.2,
-        price: "$180–$220 USD",
-        h2Output: "Not clearly stated",
-        capacity: "Not clearly stated",
-        warranty: "Varies",
+        rating: 3.4,
+        priceNzd: `${usdToNzd(180)}–${usdToNzd(220)}`, // converted range, NZD only
+        h2Output: "Not clearly specified",
+        capacity: "Not clearly specified",
+        warranty: "Unknown/varies",
         image: "evolved.png",
-        url: "https://evolvedh2o.com/",
-        description:
-          "International alternative with less clarity for NZ buyers. Consider shipping, warranty handling, and proof of output before choosing.",
+        url: "https://evolvedh2o.com/products/premium-hydrogen-water-bottle?variant=47408680042738",
         bullets: [
-          "International alternative",
-          "NZ support unclear",
-          "Specs not always transparent"
+          "International brand availability varies",
+          "Specs are less clearly documented",
+          "Factor shipping + warranty handling"
         ],
-        more: {
-          highlights: [
-            "NZ buyer experience may vary",
-            "Ensure output/warranty are clearly documented"
-          ],
+        details: {
+          description:
+            "International option where NZ availability, warranty handling, and spec clarity can vary. Confirm key claims (output, materials, warranty) before buying.",
           specs: [
-            { label: "H₂ Output", value: "Not clearly stated" },
-            { label: "Capacity", value: "Not clearly stated" },
-            { label: "Warranty", value: "Varies" },
-            { label: "Best for", value: "International buyers" },
-            { label: "Value vs #1", value: "Lower" },
-            { label: "Notes", value: "Check details" }
+            { k: "Capacity", v: "Not specified" },
+            { k: "H₂ Output", v: "Not specified" },
+            { k: "Warranty", v: "Varies" },
+            { k: "Material", v: "Not specified" },
+            { k: "Charging", v: "USB (stated)" },
+            { k: "Notes", v: "Confirm locally" }
           ]
         }
       }
     ];
 
-    /* =========================================================
-       RENDER: RANKINGS SECTION
-    ========================================================== */
-    const rankingsContainer = document.getElementById('rankings');
+    /* ==========================================================================
+       RENDER: RANKINGS LIST
+       - Matches compact WellnessPulse-ish layout
+       - View details expands row (no separate long cards)
+       ========================================================================== */
+    const rankingsList = document.getElementById("rankingsList");
 
-    products.forEach(p => {
-      const card = document.createElement('article');
-      card.className = `ranking-card${p.winner ? ' winner' : ''}`;
-      card.id = `product-${p.rank}`;
+    const checkIcon = `
+      <span class="check" aria-hidden="true">
+        <svg viewBox="0 0 20 20"><path d="M8.2 14.6 3.9 10.3l1.4-1.4 2.9 2.9 6.5-6.5 1.4 1.4-7.9 7.9z"/></svg>
+      </span>
+    `;
 
-      const fill = ratingPercent(p.rating);
+    function pillClass(type){
+      if(type === "editors") return "pill editors";
+      if(type === "highoutput") return "pill highoutput";
+      if(type === "features") return "pill features";
+      if(type === "budget") return "pill budget";
+      return "pill alt";
+    }
 
-      card.innerHTML = `
-        <div class="card-top-bar">
-          <div class="card-top-left">
-            <div class="rank-badge">${p.rank}</div>
-            <div class="category-pill">${p.category}</div>
-            ${p.badge ? `<div class="choice-pill">${p.badge}</div>` : ``}
-          </div>
-          <div class="score-badge">
-            ${p.score.toFixed(1)}
-            <span class="score-label">Overall Score</span>
-          </div>
+    products.forEach((p) => {
+      const row = document.createElement("div");
+      row.className = "rank-row";
+      row.id = `product-${p.rank}`;
+
+      row.innerHTML = `
+        <div class="rank-badge">${p.rank}</div>
+
+        <div class="product-thumb">
+          <img src="${p.image}" alt="${p.name}" loading="lazy">
         </div>
 
-        <div class="card-body">
-          <div class="product-image-container">
-            <img class="product-image" src="${p.image}" alt="${p.name}" loading="lazy" />
-            <div class="rating" aria-label="${p.rating} out of 5 stars">
-              <span class="stars-bg">★★★★★</span>
-              <span class="stars-fill" style="width:${fill}%">★★★★★</span>
-              <small>${p.rating.toFixed(1)}</small>
-            </div>
-          </div>
+        <div class="rank-main">
+          <div class="${pillClass(p.pill.type)}">${p.pill.text}</div>
+          <div class="rank-name">${p.name}</div>
 
-          <div class="product-details">
-            <h3>${p.name}</h3>
+          <ul class="benefits" aria-label="Key benefits">
+            ${p.bullets.map(b => `<li>${checkIcon}<span>${b}</span></li>`).join("")}
+          </ul>
 
-            <div class="microline">
-              <span class="micro-tag"><strong>H₂:</strong> ${p.h2Output}</span>
-              <span class="micro-tag"><strong>Capacity:</strong> ${p.capacity}</span>
-              <span class="micro-tag"><strong>Warranty:</strong> ${p.warranty}</span>
-              <span class="micro-tag"><strong>Price:</strong> ${p.price} ${p.priceNzdNote ? `<span style="font-weight:900;color:var(--text-light)"> ${p.priceNzdNote}</span>` : ``}</span>
-            </div>
-
-            <p class="product-description">${p.description}</p>
-
-            <ul class="quick-bullets">
-              ${p.bullets.slice(0,3).map(b => `<li>${b}</li>`).join('')}
-            </ul>
-
-            <details class="product-more">
-              <summary>View details</summary>
-              <div class="more-content">
-                <ul class="quick-bullets" style="margin-bottom:0.6rem">
-                  ${p.more.highlights.map(h => `<li>${h}</li>`).join('')}
-                </ul>
-
-                <div class="specs-grid">
-                  ${p.more.specs.map(s => `
-                    <div class="spec-item">
-                      <span class="spec-label">${s.label}</span>
-                      <span class="spec-value">${s.value}</span>
-                    </div>
-                  `).join('')}
+          <div class="details">
+            <p>${p.details.description}</p>
+            <div class="specs">
+              ${p.details.specs.map(s => `
+                <div class="spec">
+                  <div class="k">${s.k}</div>
+                  <div class="v">${s.v}</div>
                 </div>
-              </div>
-            </details>
+              `).join("")}
+            </div>
           </div>
         </div>
 
-        <div class="card-footer">
-          <a class="btn btn-primary" href="${p.url}" target="_blank" rel="nofollow sponsored noopener">Visit site →</a>
-          <a class="btn btn-secondary" href="#comparison">Compare</a>
+        <div class="rank-side">
+          <div>
+            <div class="score">${p.score.toFixed(1)}</div>
+            <div class="stars" style="--rating:${p.rating}" aria-label="${p.rating} out of 5 stars"></div>
+            <div class="sr-only">Rating ${p.rating} out of 5</div>
+          </div>
+
+          <div class="btns">
+            <button class="btn btn-primary" type="button" data-toggle="${p.rank}">View details →</button>
+            <a class="btn btn-outline" href="${p.url}" target="_blank" rel="nofollow sponsored noopener">Visit site →</a>
+          </div>
         </div>
       `;
 
-      rankingsContainer.appendChild(card);
+      rankingsList.appendChild(row);
     });
 
-    /* =========================================================
-       RENDER: COMPARISON TABLE (Hydrotech highlighted)
-    ========================================================== */
-    const comparisonTableBody = document.getElementById('comparisonTableBody');
+    // toggle details
+    rankingsList.addEventListener("click", (e) => {
+      const btn = e.target.closest("button[data-toggle]");
+      if(!btn) return;
+      const id = btn.getAttribute("data-toggle");
+      const row = document.getElementById(`product-${id}`);
+      const isOpen = row.classList.toggle("expanded");
+      btn.textContent = isOpen ? "Hide details →" : "View details →";
+    });
+
+    /* ==========================================================================
+       RENDER: COMPARISON TABLE (Hydrotech highlighted in gold)
+       ========================================================================== */
+    const comparisonBody = document.getElementById("comparisonTableBody");
 
     products.forEach(p => {
-      const tr = document.createElement('tr');
-      if (p.winner) tr.className = 'winner-row';
+      const tr = document.createElement("tr");
+      if(p.rank === 1) tr.classList.add("winner");
 
-      // Keep ONE NZD conversion under Price: Echo has (~$490 NZD); others are NZD already
-      const priceCell = p.price + (p.priceNzdNote ? ` ${p.priceNzdNote}` : ``);
+      const priceDisplay = (typeof p.priceNzd === "number")
+        ? `$${p.priceNzd}`
+        : (String(p.priceNzd).includes("–") ? `$${p.priceNzd}` : String(p.priceNzd));
 
       tr.innerHTML = `
-        <td class="product-name">${p.name}${p.winner ? ` <span style="margin-left:8px; font-weight:900; color:var(--gold)">★ Winner</span>` : ``}</td>
-        <td><strong>${p.score.toFixed(1)}</strong>/10</td>
+        <td>
+          <div class="product-cell">
+            <div class="tiny"><img src="${p.image}" alt="" aria-hidden="true"></div>
+            <span>${p.name}</span>
+          </div>
+        </td>
+        <td>${p.score.toFixed(1)}/10</td>
         <td>${p.h2Output}</td>
         <td>${p.capacity}</td>
         <td>${p.warranty}</td>
-        <td>${priceCell}</td>
+        <td>${priceDisplay}</td>
       `;
-      comparisonTableBody.appendChild(tr);
+      comparisonBody.appendChild(tr);
     });
   </script>
 </body>
 </html>
+```
